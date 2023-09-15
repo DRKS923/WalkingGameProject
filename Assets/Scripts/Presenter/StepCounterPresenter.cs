@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Android;
 using UnityEngine.UI;
 
 public class StepCounterPresenter : MonoBehaviour
@@ -11,7 +12,7 @@ public class StepCounterPresenter : MonoBehaviour
     public int steps;
     public TMP_Text counterText;
 
-    void Start()
+    void Start()    
     {
         AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
         AndroidJavaObject currentActivity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");

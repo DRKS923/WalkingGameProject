@@ -28,8 +28,7 @@ public class StepCounterClass implements SensorEventListener {
     @Override
     public void onSensorChanged(SensorEvent event) {
         if (event.sensor.getType() == Sensor.TYPE_STEP_COUNTER) {
-            /* stepCount = (int) event.values[0]; test */
-            stepCount++;
+            stepCount = (int) event.values[0];
         }
     }
 
