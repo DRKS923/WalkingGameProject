@@ -4,19 +4,35 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Android;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
-public class StepCounterPresenter : MonoBehaviour
+public class StepCounter : MonoBehaviour
 {
 #if UNITY_ANDROID
     private AndroidJavaObject stepCounterPlugin;
-    public int steps;
+  
     public TMP_Text counterText;
+    [SerializeField] public Background background;
+    public BackgroundScroll scroller;
+    public int prevSteps;
+    private int steps;
+    public int Steps{
+        get { return steps; }   // get method
+        set 
+        { 
+            steps = value;
+            HasStepsChanged();
+        }  // set method
+    }
 
     void Start()    
     {
         AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
         AndroidJavaObject currentActivity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
         stepCounterPlugin = new AndroidJavaObject("com.drks.stepcounterlibrary.StepCounterClass", currentActivity);
+        background = gameObject.GetComponent<Background>();
+        scroller = gameObject.GetComponent<BackgroundScroll>();
+        prevSteps = Steps;
     }
 
     public int GetStepCount()
@@ -50,9 +66,29 @@ public class StepCounterPresenter : MonoBehaviour
 
     private void Update()
     {
-        steps = GetStepCount();
-        counterText.text = "Steps: " + steps.ToString();
+        Steps = GetStepCount();
+        counterText.text = "Steps: " + Steps.ToString();
     }
+    private void OnBecameInvisible()
+    {
+        
+    }
+
+    private void HasStepsChanged()
+    {
+        if(Steps != prevSteps)
+        {
+            prevSteps = Steps;
+            scroller.moveBG();
+        }
+        
+    }
+
+    public void TakeStep() 
+    {
+        Steps++;
+    }
+
 #else
     public int GetStepCount()
     {
@@ -60,4 +96,5 @@ public class StepCounterPresenter : MonoBehaviour
         return 1313;
     }
 #endif
+
 }
