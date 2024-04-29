@@ -14,6 +14,7 @@ public class StepCounter : MonoBehaviour
     public TMP_Text counterText;
     [SerializeField] public Background background;
     public BackgroundScroll scroller;
+    public Event eventScroll;
     public int prevSteps;
     private int steps;
     public int Steps{
@@ -24,6 +25,7 @@ public class StepCounter : MonoBehaviour
             HasStepsChanged();
         }  // set method
     }
+    public DialogueManager dialogueManager;
 
     void Start()    
     {
@@ -32,6 +34,7 @@ public class StepCounter : MonoBehaviour
         stepCounterPlugin = new AndroidJavaObject("com.drks.stepcounterlibrary.StepCounterClass", currentActivity);
         background = gameObject.GetComponent<Background>();
         scroller = gameObject.GetComponent<BackgroundScroll>();
+        eventScroll = gameObject.GetComponent<Event>();
         prevSteps = Steps;
     }
 
@@ -44,7 +47,7 @@ public class StepCounter : MonoBehaviour
         else
         {
             Debug.LogWarning("Step counter only works on Android devices.");
-            return 6969;
+            return Steps;
         }
     }
 
@@ -80,13 +83,17 @@ public class StepCounter : MonoBehaviour
         {
             prevSteps = Steps;
             scroller.moveBG();
+            eventScroll.MoveEvent();
         }
         
     }
 
     public void TakeStep() 
     {
-        Steps++;
+        if (!dialogueManager.isDialogueActive)
+        {
+            Steps++;
+        }
     }
 
 #else
