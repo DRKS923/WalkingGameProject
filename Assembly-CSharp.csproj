@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\Presenter\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\Presenter\DialogueTrigger.cs" />
     <Compile Include="Assets\Scripts\Presenter\BackgroundScroll.cs" />
+    <Compile Include="Assets\Scripts\Presenter\EventManager.cs" />
     <Compile Include="Assets\Scripts\Presenter\StepCounter.cs" />
     <Compile Include="Assets\Scripts\Presenter\Event.cs" />
   </ItemGroup>

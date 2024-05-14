@@ -12,9 +12,8 @@ public class StepCounter : MonoBehaviour
     private AndroidJavaObject stepCounterPlugin;
   
     public TMP_Text counterText;
-    [SerializeField] public Background background;
     public BackgroundScroll scroller;
-    public Event eventScroll;
+    public static Event eventScroll;
     public int prevSteps;
     private int steps;
     public int Steps{
@@ -25,16 +24,16 @@ public class StepCounter : MonoBehaviour
             HasStepsChanged();
         }  // set method
     }
+    public float waitTime = 0.1f;
     public DialogueManager dialogueManager;
+    public Animator playerCharacter;
 
     void Start()    
     {
         AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
         AndroidJavaObject currentActivity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
         stepCounterPlugin = new AndroidJavaObject("com.drks.stepcounterlibrary.StepCounterClass", currentActivity);
-        background = gameObject.GetComponent<Background>();
         scroller = gameObject.GetComponent<BackgroundScroll>();
-        eventScroll = gameObject.GetComponent<Event>();
         prevSteps = Steps;
     }
 
@@ -72,10 +71,6 @@ public class StepCounter : MonoBehaviour
         Steps = GetStepCount();
         counterText.text = "Steps: " + Steps.ToString();
     }
-    private void OnBecameInvisible()
-    {
-        
-    }
 
     private void HasStepsChanged()
     {
@@ -84,6 +79,7 @@ public class StepCounter : MonoBehaviour
             prevSteps = Steps;
             scroller.moveBG();
             eventScroll.MoveEvent();
+            playerCharacter.Play("PlayerWalk");
         }
         
     }
@@ -95,6 +91,44 @@ public class StepCounter : MonoBehaviour
             Steps++;
         }
     }
+
+    public void Take100()
+    {
+        waitTime = 0.1f;
+        StartCoroutine(hundredSteps());
+    }
+
+    public void Take1K()
+    {
+        waitTime = 0.05f;
+        StartCoroutine(thousandSteps());
+    }
+
+    IEnumerator hundredSteps()
+    {
+        int i = 0;
+        while (i < 100 && !dialogueManager.isDialogueActive)
+        {
+            yield return new WaitForSecondsRealtime(waitTime);
+            TakeStep(); ;
+            i++;
+        }
+        
+    }
+    IEnumerator thousandSteps()
+    {
+        int i = 0;
+        while (i < 1000 && !dialogueManager.isDialogueActive)
+        {
+            yield return new WaitForSecondsRealtime(waitTime);
+            TakeStep(); ;
+            i++;
+        }
+
+    }
+
+
+
 
 #else
     public int GetStepCount()
