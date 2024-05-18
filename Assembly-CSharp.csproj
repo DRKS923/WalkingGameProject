@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Presenter\DialogueManager.cs" />
+    <Compile Include="Assets\Scripts\Presenter\BGMManager.cs" />
     <Compile Include="Assets\Scripts\Presenter\DialogueTrigger.cs" />
     <Compile Include="Assets\Scripts\Presenter\BackgroundScroll.cs" />
     <Compile Include="Assets\Scripts\Presenter\EventManager.cs" />

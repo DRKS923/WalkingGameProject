@@ -16,6 +16,7 @@ public class DialogueManager : MonoBehaviour
     public float typingSpeed = 0.2f;
     public Animator animator;
     public StepCounter stepCounter;
+    public AudioSource textSound;
     
     void Start()
     {
@@ -23,6 +24,7 @@ public class DialogueManager : MonoBehaviour
             Instance = this;
 
         lineQueue = new Queue<DialogueLine>();
+        textSound = GetComponent<AudioSource>();
     }
     
     public void StartDialogue(Dialogue dialogue)
@@ -62,6 +64,7 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in dialogueLine.line.ToCharArray() )
         {
             dialogueArea.text += letter;
+            textSound.Play();
             yield return new WaitForSeconds(typingSpeed);
         }
     }
