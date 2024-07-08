@@ -11,6 +11,7 @@ public class Event : MonoBehaviour
     public BoxCollider2D bc2D;
     private bool canMove = true;
     public Animator animator;
+    public AudioSource spawnNotif;
 
     void Start()
     {
@@ -19,6 +20,8 @@ public class Event : MonoBehaviour
         dialogueTrigger = GetComponent<DialogueTrigger>();
         bc2D = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
+        spawnNotif = GetComponent<AudioSource>();
+        spawnNotif.Play();
     }
 
     public void MoveEvent()
@@ -40,6 +43,7 @@ public class Event : MonoBehaviour
         if (collision.tag == "Barrier")
         {
             canMove = false;
+            transform.position = originalPos.position;
             this.gameObject.SetActive(false);
         }
     }

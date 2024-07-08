@@ -73,6 +73,7 @@ public class DialogueManager : MonoBehaviour
     {
         isDialogueActive = false;
         stepCounter.enabled = true;
+        StopAllCoroutines();
         animator.Play("DialogueClose");
     }
 }

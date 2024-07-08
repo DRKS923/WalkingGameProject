@@ -5,17 +5,20 @@ using UnityEngine;
 using UnityEngine.Android;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
+using UnityEngine.InputSystem.Android;
 
 public class StepCounter : MonoBehaviour
 {
-#if UNITY_ANDROID
-    private AndroidJavaObject stepCounterPlugin;
-  
+    public static StepCounter Instance;
     public TMP_Text counterText;
     public BackgroundScroll scroller;
     public static Event eventScroll;
     public int prevSteps;
-    private int steps;
+    [SerializeField]private int steps;
+    
+
     public int Steps{
         get { return steps; }   // get method
         set 
@@ -29,45 +32,42 @@ public class StepCounter : MonoBehaviour
     public Animator playerCharacter;
     public int prevStepCounter;
 
+    #if UNITY_ANDROID
     void Start()    
     {
-        AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
-        AndroidJavaObject currentActivity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
-        stepCounterPlugin = new AndroidJavaObject("com.drks.stepcounterlibrary.StepCounterClass", currentActivity);
-        scroller = gameObject.GetComponent<BackgroundScroll>();
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        if (!Permission.HasUserAuthorizedPermission("android.permission.ACTIVITY_RECOGNITION"))
+        {
+            Permission.RequestUserPermission("android.permission.ACTIVITY_RECOGNITION");
+        }
         prevSteps = Steps;
-        prevStepCounter = stepCounterPlugin.Call<int>("getStepCount");
+        prevStepCounter = AndroidStepCounter.current.stepCounter.ReadValue();
+    }
+    private void OnEnable()
+    {
+        if(!AndroidStepCounter.current.enabled)
+        {
+            InputSystem.EnableDevice(AndroidStepCounter.current);
+            AndroidStepCounter.current.MakeCurrent();
+        }
     }
 
     public void GetStepCount()
     {
         if (Application.platform == RuntimePlatform.Android)
         {
-            if (stepCounterPlugin.Call<int>("getStepCount") != prevStepCounter)
-            {
-                prevStepCounter = stepCounterPlugin.Call<int>("getStepCount");
+            
+            if (AndroidStepCounter.current.stepCounter.ReadValue() != prevStepCounter){
                 TakeStep();
+                prevStepCounter = AndroidStepCounter.current.stepCounter.ReadValue();
             }
         }
         else
         {
             Debug.LogWarning("Step counter only works on Android devices.");
-        }
-    }
-
-    void OnApplicationPause(bool pauseStatus)
-    {
-        if (pauseStatus)
-        {
-            // Unregister the listener when the application is paused
-            stepCounterPlugin.Call("stop");
-        }
-        else
-        {
-            // Re-register the listener when the application resumes
-            AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
-            AndroidJavaObject currentActivity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
-            stepCounterPlugin.Call("start", currentActivity);
         }
     }
 
@@ -97,6 +97,7 @@ public class StepCounter : MonoBehaviour
         }
     }
 
+    //testing functions
     public void Take100()
     {
         waitTime = 0.1f;
@@ -131,16 +132,6 @@ public class StepCounter : MonoBehaviour
         }
 
     }
-
-
-
-
-#else
-    public int GetStepCount()
-    {
-        Debug.LogWarning("Step counter only works on Android devices.");
-        return 1313;
-    }
-#endif
+    #endif
 
 }
