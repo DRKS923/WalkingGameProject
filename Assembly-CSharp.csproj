@@ -59,11 +59,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Presenter\DialogueManager.cs" />
+    <Compile Include="Assets\Scripts\Model\DataPersistanceManager.cs" />
+    <Compile Include="Assets\Scripts\Model\IDataPersistence.cs" />
     <Compile Include="Assets\Scripts\View\BackgroundScroll.cs" />
+    <Compile Include="Assets\Scripts\Model\GameData.cs" />
     <Compile Include="Assets\Scripts\Presenter\BGMManager.cs" />
+    <Compile Include="Assets\Scripts\Presenter\DialogueTrigger.cs" />
+    <Compile Include="Assets\Scripts\Presenter\LevelPresenter.cs" />
+    <Compile Include="Assets\Scripts\Model\FileDataHandler.cs" />
+    <Compile Include="Assets\Scripts\Presenter\PlayerLevel.cs" />
     <Compile Include="Assets\Scripts\Presenter\EventManager.cs" />
     <Compile Include="Assets\Scripts\Presenter\StepCounter.cs" />
-    <Compile Include="Assets\Scripts\Model\DialogueTrigger.cs" />
     <Compile Include="Assets\Scripts\Presenter\Event.cs" />
   </ItemGroup>
   <ItemGroup>

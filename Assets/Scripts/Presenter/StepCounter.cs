@@ -9,7 +9,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
 using UnityEngine.InputSystem.Android;
 
-public class StepCounter : MonoBehaviour
+public class StepCounter : MonoBehaviour, IDataPersistence
 {
     public static StepCounter Instance;
     public TMP_Text counterText;
@@ -39,10 +39,7 @@ public class StepCounter : MonoBehaviour
         {
             Instance = this;
         }
-        if (!Permission.HasUserAuthorizedPermission("android.permission.ACTIVITY_RECOGNITION"))
-        {
-            Permission.RequestUserPermission("android.permission.ACTIVITY_RECOGNITION");
-        }
+        RequestPermissions();
         prevSteps = Steps;
         prevStepCounter = AndroidStepCounter.current.stepCounter.ReadValue();
     }
@@ -96,6 +93,15 @@ public class StepCounter : MonoBehaviour
             Steps++;
         }
     }
+    public void LoadData(GameData data)
+    {
+        Steps = data.steps;
+    }
+
+    public void SaveData(GameData data)
+    {
+        data.steps = steps;
+    }
 
     //testing functions
     public void Take100()
@@ -132,6 +138,22 @@ public class StepCounter : MonoBehaviour
         }
 
     }
-    #endif
+    
+    private void RequestPermissions() 
+    {
+        if (!Permission.HasUserAuthorizedPermission("android.permission.ACTIVITY_RECOGNITION"))
+        {
+            Permission.RequestUserPermission("android.permission.ACTIVITY_RECOGNITION");
+        }
+        if (!Permission.HasUserAuthorizedPermission("android.permission.WRITE_EXTERNAL_STORAGE"))
+        {
+            Permission.RequestUserPermission("android.permission.WRITE_EXTERNAL_STORAGE");
+        }
+        if (!Permission.HasUserAuthorizedPermission("android.permission.READ_EXTERNAL_STORAGE"))
+        {
+            Permission.RequestUserPermission("android.permission.READ_EXTERNAL_STORAGE");
+        }
+    }
+#endif
 
 }

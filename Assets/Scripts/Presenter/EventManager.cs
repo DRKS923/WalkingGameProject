@@ -21,7 +21,7 @@ public class EventManager : MonoBehaviour
 
     void Update()
     {
-        if (stepCounter.Steps % 500 == 0 && !isEventLive)
+        if (stepCounter.Steps % 200 == 0 && !isEventLive)
         {
             spawnEvent();
         }

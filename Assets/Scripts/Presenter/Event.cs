@@ -9,9 +9,11 @@ public class Event : MonoBehaviour
     public bool isColliding = false;
     public DialogueTrigger dialogueTrigger;
     public BoxCollider2D bc2D;
-    private bool canMove = true;
+    public bool canMove = true;
     public Animator animator;
     public AudioSource spawnNotif;
+    public GameObject playerCharacter;
+    public PlayerLevel playerLevel;
 
     void Start()
     {
@@ -22,6 +24,8 @@ public class Event : MonoBehaviour
         animator = GetComponent<Animator>();
         spawnNotif = GetComponent<AudioSource>();
         spawnNotif.Play();
+        playerCharacter = GameObject.FindGameObjectWithTag("Player");
+        playerLevel = playerCharacter.GetComponent<PlayerLevel>();
     }
 
     public void MoveEvent()
@@ -39,6 +43,7 @@ public class Event : MonoBehaviour
         if (collision.tag == "Player")
         {
             dialogueTrigger.TriggerDialogue();
+            playerLevel.currentExp = playerLevel.currentExp + 50;
         }
         if (collision.tag == "Barrier")
         {
