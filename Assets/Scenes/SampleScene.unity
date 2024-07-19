@@ -2096,6 +2096,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: data.walk
+  gameData:
+    level: 1
+    currentExp: 0
+    targetExp: 100
+    steps: 0
 --- !u!1 &1337636637
 GameObject:
   m_ObjectHideFlags: 0
@@ -2934,6 +2939,7 @@ MonoBehaviour:
   listNumber: 0
   stepCounter: {fileID: 2021367945}
   currentEvent: {fileID: 0}
+  npc: {fileID: 0}
 --- !u!4 &1680693011
 Transform:
   m_ObjectHideFlags: 0
@@ -3674,6 +3680,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counterText: {fileID: 2021367946}
   scroller: {fileID: 743074772}
+  eventManager: {fileID: 1680693009}
   prevSteps: 0
   steps: 0
   waitTime: 0.1

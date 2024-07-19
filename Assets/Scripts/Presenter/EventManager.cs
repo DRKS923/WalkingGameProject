@@ -9,13 +9,25 @@ public class EventManager : MonoBehaviour
     [SerializeField]int listNumber;
     public StepCounter stepCounter;
     bool isEventLive = false;
-    [SerializeField]GameObject currentEvent;
+    [SerializeField]public GameObject currentEvent = null;
+    public Event npc;
     
     void Start()
     {
         if (instance == null)
         {
             instance = this;
+        }
+    }
+
+    private void Awake()
+    {
+        if (currentEvent == null)
+        {
+            listNumber = Random.Range(0, 5);
+            currentEvent = eventList[listNumber];
+            npc = currentEvent.GetComponent<Event>();
+            npc.animator = currentEvent.GetComponent<Animator>();
         }
     }
 
@@ -36,8 +48,8 @@ public class EventManager : MonoBehaviour
         listNumber = Random.Range(0, 5);
         currentEvent = eventList[listNumber];
         currentEvent.SetActive(true);
-
-        StepCounter.eventScroll = currentEvent.GetComponent<Event>();
+        
+        npc = currentEvent.GetComponent<Event>();
         isEventLive = true;
     }
 }

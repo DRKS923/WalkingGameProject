@@ -9,7 +9,7 @@ public class Event : MonoBehaviour
     public bool isColliding = false;
     public DialogueTrigger dialogueTrigger;
     public BoxCollider2D bc2D;
-    public bool canMove = true;
+    public bool canMove = false;
     public Animator animator;
     public AudioSource spawnNotif;
     public GameObject playerCharacter;
@@ -27,6 +27,8 @@ public class Event : MonoBehaviour
         playerCharacter = GameObject.FindGameObjectWithTag("Player");
         playerLevel = playerCharacter.GetComponent<PlayerLevel>();
     }
+
+    
 
     public void MoveEvent()
     {

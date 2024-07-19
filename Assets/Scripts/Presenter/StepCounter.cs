@@ -14,7 +14,8 @@ public class StepCounter : MonoBehaviour, IDataPersistence
     public static StepCounter Instance;
     public TMP_Text counterText;
     public BackgroundScroll scroller;
-    public static Event eventScroll;
+    public GameObject eventManager;
+    public static EventManager eventScroll;
     public int prevSteps;
     [SerializeField]private int steps;
     
@@ -40,6 +41,7 @@ public class StepCounter : MonoBehaviour, IDataPersistence
             Instance = this;
         }
         RequestPermissions();
+        eventScroll = eventManager.GetComponent<EventManager>();
         prevSteps = Steps;
         prevStepCounter = AndroidStepCounter.current.stepCounter.ReadValue();
     }
@@ -80,7 +82,7 @@ public class StepCounter : MonoBehaviour, IDataPersistence
         {
             prevSteps = Steps;
             scroller.moveBG();
-            eventScroll.MoveEvent();
+            eventScroll.npc.MoveEvent(); 
             playerCharacter.Play("PlayerWalk");
         }
         

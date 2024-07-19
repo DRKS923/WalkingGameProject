@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class LevelPresenter : MonoBehaviour
+public class LevelView : MonoBehaviour
 {
     public GameObject playerCharacter;
     public PlayerLevel playerLevel;
