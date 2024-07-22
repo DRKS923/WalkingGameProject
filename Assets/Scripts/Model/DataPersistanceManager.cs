@@ -9,8 +9,10 @@ public class DataPersistanceManager : MonoBehaviour
     [Header("File Storage Config")]
     [SerializeField] private string fileName;
 
-    [SerializeField]private GameData gameData;
-    [SerializeField]private List<IDataPersistence> dataPersistenceObjects;
+    [SerializeField] private bool useEncryption = false;
+
+    private GameData gameData;
+    private List<IDataPersistence> dataPersistenceObjects;
     private FileDataHandler dataHandler;
     public static DataPersistanceManager Instance { get; private set; }
 
@@ -25,14 +27,14 @@ public class DataPersistanceManager : MonoBehaviour
 
     private void Start()
     {
-        this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName);
+        this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName, useEncryption);
         this.dataPersistenceObjects = FindAllDataPersistenceObjects();
         LoadGame();
     }
 
     private void Update()
     {
-        //SaveGame();
+        SaveGame();
     }
 
     public void NewGame() 
