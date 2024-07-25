@@ -32,7 +32,6 @@ public class FileDataHandler
                     using (StreamReader reader = new StreamReader(stream))
                     {
                         dataToLoad = reader.ReadToEnd();
-                        Debug.Log(dataToLoad);
                     }
                 }
 
@@ -42,7 +41,6 @@ public class FileDataHandler
                 }
 
                 loadedData = JsonUtility.FromJson<GameData>(dataToLoad);
-                Debug.Log("Level:" + loadedData.level + "\nSteps: " + loadedData.steps);
                 
             }
             catch(Exception e)

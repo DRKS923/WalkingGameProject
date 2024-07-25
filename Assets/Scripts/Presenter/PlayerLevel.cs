@@ -14,8 +14,8 @@ public class PlayerLevel : MonoBehaviour, IDataPersistence
         if (currentExp >= targetExp)
         {
             playerLevel++;
-            currentExp = currentExp - targetExp;
-            targetExp = targetExp + 50;
+            currentExp -= targetExp;
+            targetExp += 50;
         }
     }
 

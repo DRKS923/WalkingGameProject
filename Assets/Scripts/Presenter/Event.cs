@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class Event : MonoBehaviour
 {
-    public float _x;
+    [SerializeField]private float _x;
     public Transform originalPos;
-    public bool isColliding = false;
     public DialogueTrigger dialogueTrigger;
-    public BoxCollider2D bc2D;
     public bool canMove = false;
     public Animator animator;
     public AudioSource spawnNotif;
@@ -20,15 +18,12 @@ public class Event : MonoBehaviour
         canMove = true;
         transform.position = originalPos.position;
         dialogueTrigger = GetComponent<DialogueTrigger>();
-        bc2D = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
         spawnNotif = GetComponent<AudioSource>();
         spawnNotif.Play();
         playerCharacter = GameObject.FindGameObjectWithTag("Player");
         playerLevel = playerCharacter.GetComponent<PlayerLevel>();
     }
-
-    
 
     public void MoveEvent()
     {

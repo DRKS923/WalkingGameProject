@@ -8,6 +8,7 @@ TagManager:
   - Events
   - Barrier
   - EventManager
+  - Enemy
   layers:
   - Default
   - TransparentFX

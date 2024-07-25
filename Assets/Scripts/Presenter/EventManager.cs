@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class EventManager : MonoBehaviour
 {
-    public static object instance;
+    public static EventManager Instance;
     public List<GameObject> eventList = new List<GameObject>();
     [SerializeField]int listNumber;
     public StepCounter stepCounter;
     bool isEventLive = false;
     [SerializeField]public GameObject currentEvent = null;
-    public Event npc;
     
     void Start()
     {
-        if (instance == null)
+        if (Instance != null && Instance != this)
         {
-            instance = this;
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
         }
     }
 
@@ -26,8 +29,8 @@ public class EventManager : MonoBehaviour
         {
             listNumber = Random.Range(0, 5);
             currentEvent = eventList[listNumber];
-            npc = currentEvent.GetComponent<Event>();
-            npc.animator = currentEvent.GetComponent<Animator>();
+            currentEvent.GetComponent<Event>();
+            currentEvent.GetComponent<Animator>();
         }
     }
 
@@ -35,7 +38,7 @@ public class EventManager : MonoBehaviour
     {
         if (stepCounter.Steps % 200 == 0 && !isEventLive)
         {
-            spawnEvent();
+            SpawnEvent();
         }
         if (currentEvent.activeSelf == false)
         {
@@ -43,13 +46,12 @@ public class EventManager : MonoBehaviour
         }
     }
 
-    void spawnEvent()
+    void SpawnEvent()
     {
         listNumber = Random.Range(0, 5);
         currentEvent = eventList[listNumber];
         currentEvent.SetActive(true);
-        
-        npc = currentEvent.GetComponent<Event>();
         isEventLive = true;
+        currentEvent.GetComponent<Event>().canMove = true;
     }
 }

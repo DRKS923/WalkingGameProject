@@ -15,13 +15,18 @@ public class DialogueManager : MonoBehaviour
     public bool isDialogueActive = false;
     public float typingSpeed = 0.2f;
     public Animator animator;
-    public StepCounter stepCounter;
     public AudioSource textSound;
     
     void Start()
     {
-        if (Instance == null)
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
             Instance = this;
+        }
 
         lineQueue = new Queue<DialogueLine>();
         textSound = GetComponent<AudioSource>();
@@ -30,7 +35,7 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue dialogue)
     {
         isDialogueActive = true;
-        stepCounter.enabled = false;
+        StepCounter.Instance.enabled = false;
         animator.Play("DialogueOpen");
         lineQueue.Clear();
 
@@ -72,7 +77,7 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         isDialogueActive = false;
-        stepCounter.enabled = true;
+        StepCounter.Instance.enabled = true;
         StopAllCoroutines();
         animator.Play("DialogueClose");
     }

@@ -14,8 +14,6 @@ public class StepCounter : MonoBehaviour, IDataPersistence
     public static StepCounter Instance;
     public TMP_Text counterText;
     public BackgroundScroll scroller;
-    public GameObject eventManager;
-    public static EventManager eventScroll;
     public int prevSteps;
     [SerializeField]private int steps;
     
@@ -36,12 +34,14 @@ public class StepCounter : MonoBehaviour, IDataPersistence
     #if UNITY_ANDROID
     void Start()    
     {
-        if (Instance == null)
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
         {
             Instance = this;
         }
-        RequestPermissions();
-        eventScroll = eventManager.GetComponent<EventManager>();
         prevSteps = Steps;
         prevStepCounter = AndroidStepCounter.current.stepCounter.ReadValue();
     }
@@ -72,6 +72,7 @@ public class StepCounter : MonoBehaviour, IDataPersistence
 
     private void Update()
     {
+        RequestPermissions();
         GetStepCount();
         counterText.text = "Steps: " + Steps.ToString();
     }
@@ -82,8 +83,9 @@ public class StepCounter : MonoBehaviour, IDataPersistence
         {
             prevSteps = Steps;
             scroller.moveBG();
-            eventScroll.npc.MoveEvent(); 
+            EventManager.Instance.currentEvent.GetComponent<Event>().MoveEvent(); 
             playerCharacter.Play("PlayerWalk");
+            EnemyManager.Instance.enemy.GetComponent<Enemy>().MoveEnemy();
         }
         
     }
