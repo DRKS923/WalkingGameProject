@@ -11,12 +11,17 @@ public class Enemy : MonoBehaviour
     public bool canMove = false;
     public Transform originalPos;
     public float timerSeconds;
+    [SerializeField]private Animator animator;
+    [SerializeField]private AudioSource spawnNotif;
 
     private void OnEnable()
     {
         canMove = true;
         transform.position = originalPos.position;
         LevelEnemy();
+        animator = GetComponentInChildren<Animator>();
+        spawnNotif = GetComponent<AudioSource>();
+        spawnNotif.Play();
     }
 
     
@@ -25,6 +30,7 @@ public class Enemy : MonoBehaviour
         if (canMove)
         {
             transform.position += new Vector3(_x, 0, 0);
+            animator.Play("walk");
         }
     }
 

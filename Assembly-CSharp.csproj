@@ -804,10 +804,6 @@
       <Project>{7F88170D-37C0-790D-61A3-97CF2205D25E}</Project>
       <Name>Unity.2D.Aseprite.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.InternalAPIEditorBridge.005.csproj">
-      <Project>{1D1DE92F-A460-7EA6-6FF9-9E2D5F5EFF48}</Project>
-      <Name>Unity.InternalAPIEditorBridge.005</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Flow.csproj">
       <Project>{26157070-BBF4-466B-DCA9-D172EF1506CC}</Project>
       <Name>Unity.VisualScripting.Flow</Name>

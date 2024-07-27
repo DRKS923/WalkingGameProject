@@ -93,8 +93,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.InputSystem.TestFrame
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Collections.BurstCompatibilityGen", "Unity.Collections.BurstCompatibilityGen.csproj", "{30BEAE69-CAC6-5A5B-F665-0B0607B347E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.InternalAPIEditorBridge.005", "Unity.InternalAPIEditorBridge.005.csproj", "{1D1DE92F-A460-7EA6-6FF9-9E2D5F5EFF48}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.VisualScripting.Shared.Editor", "Unity.VisualScripting.Shared.Editor.csproj", "{FAA74FCB-A61F-B480-C40C-0131ED1EA711}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Collections.DocCodeSamples", "Unity.Collections.DocCodeSamples.csproj", "{EAFFD2C7-4657-23F6-243D-51A5D649DB0B}"
@@ -291,10 +289,6 @@ Global
 		{30BEAE69-CAC6-5A5B-F665-0B0607B347E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30BEAE69-CAC6-5A5B-F665-0B0607B347E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30BEAE69-CAC6-5A5B-F665-0B0607B347E2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1D1DE92F-A460-7EA6-6FF9-9E2D5F5EFF48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1D1DE92F-A460-7EA6-6FF9-9E2D5F5EFF48}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1D1DE92F-A460-7EA6-6FF9-9E2D5F5EFF48}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1D1DE92F-A460-7EA6-6FF9-9E2D5F5EFF48}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FAA74FCB-A61F-B480-C40C-0131ED1EA711}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FAA74FCB-A61F-B480-C40C-0131ED1EA711}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAA74FCB-A61F-B480-C40C-0131ED1EA711}.Release|Any CPU.ActiveCfg = Release|Any CPU

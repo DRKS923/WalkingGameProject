@@ -1,0 +1,1449 @@
+fileFormatVersion: 2
+guid: 5c4bac4f58763d544952f070d3b91637
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: idle
+    second: {fileID: 7400000, guid: ffbb7a021a09b114099f2d9cb363b266, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: look
+    second: {fileID: 7400000, guid: 7c8556d62f602ac44a3d259484fee54a, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: point
+    second: {fileID: 7400000, guid: 58c22aeacd2c06f4d817334c71dd10e4, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: walk
+    second: {fileID: 7400000, guid: 97772982612262b4d8da60e6a6ecc2a3, type: 2}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 10
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638576970162391530
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: ogre master - export_Frame_0
+    originalName: 
+    pivot: {x: 0.5, y: -1.0952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 119
+      y: 33
+      width: 18
+      height: 21
+    spriteID: bb1bcb9f8612d404a8b9ae262df7d539
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 119, y: 33}
+  - name: ogre master - export_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: -1.15}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 134
+      y: 62
+      width: 18
+      height: 20
+    spriteID: fb8af95869daa1e48aab434c7b201978
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 134, y: 62}
+  - name: ogre master - export_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: -1.15}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 62
+      width: 18
+      height: 20
+    spriteID: 526f257cdf3bd9a4780261d197181b80
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 160, y: 62}
+  - name: ogre master - export_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: -1.15}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 186
+      y: 62
+      width: 18
+      height: 20
+    spriteID: a21911f9289ef0b4b9a4b1eda95d3267
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 186, y: 62}
+  - name: ogre master - export_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: -1.0952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 145
+      y: 33
+      width: 18
+      height: 21
+    spriteID: e4cb6cdf6fbfb73408659fcf64f1f41d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 145, y: 33}
+  - name: ogre master - export_Frame_5
+    originalName: 
+    pivot: {x: 0.5, y: -1.0952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 35
+      y: 33
+      width: 20
+      height: 21
+    spriteID: 10a2de0038a2158409b7b00b380658ea
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 35, y: 33}
+  - name: ogre master - export_Frame_6
+    originalName: 
+    pivot: {x: 0.47619048, y: -1.2105263}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 63
+      y: 33
+      width: 21
+      height: 19
+    spriteID: 840f589238f44bd4cbff662168755368
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 63, y: 33}
+  - name: ogre master - export_Frame_7
+    originalName: 
+    pivot: {x: 0.5, y: -1.15}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 212
+      y: 62
+      width: 18
+      height: 20
+    spriteID: 15679bd1f52f5494e8e30cddd26e9585
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 212, y: 62}
+  - name: ogre master - export_Frame_8
+    originalName: 
+    pivot: {x: 0.5, y: -1.0952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 147
+      width: 16
+      height: 21
+    spriteID: 38cfe866de019f14f825fbd6933f0171
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 147}
+  - name: ogre master - export_Frame_9
+    originalName: 
+    pivot: {x: 0.5625, y: -1.0952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 147
+      width: 16
+      height: 21
+    spriteID: c4c262ed884a4e8499daef69e0f41e97
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 147}
+  - name: ogre master - export_Frame_10
+    originalName: 
+    pivot: {x: 0.5714286, y: -1.2105263}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 238
+      y: 91
+      width: 14
+      height: 19
+    spriteID: 12c85c4b03f90c8498a6543a07bbfcbe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 238, y: 91}
+  - name: ogre master - export_Frame_11
+    originalName: 
+    pivot: {x: 0.5, y: -1.2105263}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 82
+      y: 119
+      width: 18
+      height: 19
+    spriteID: 75a044e44286c7b438ef62643e1b7a48
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 82, y: 119}
+  - name: ogre master - export_Frame_12
+    originalName: 
+    pivot: {x: 0.47368422, y: -1.15}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 92
+      y: 33
+      width: 19
+      height: 20
+    spriteID: baf0224a0e289624e897536b440dbe44
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 92, y: 33}
+  - name: ogre master - export_Frame_13
+    originalName: 
+    pivot: {x: 0.5, y: -1.0952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 171
+      y: 33
+      width: 18
+      height: 21
+    spriteID: 0911f86a2b0032a4786c1e0ef583e809
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 171, y: 33}
+  - name: ogre master - export_Frame_14
+    originalName: 
+    pivot: {x: 0.5, y: -1.0952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 197
+      y: 33
+      width: 18
+      height: 21
+    spriteID: 982908ef0ccd7b8408c4f3783f78123c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 197, y: 33}
+  - name: ogre master - export_Frame_15
+    originalName: 
+    pivot: {x: 0.5, y: -1.15}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 91
+      width: 18
+      height: 20
+    spriteID: 703effc1dbb440d40a81b4ca1671f865
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 91}
+  - name: ogre master - export_Frame_16
+    originalName: 
+    pivot: {x: 0.5, y: -1.15}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 30
+      y: 91
+      width: 18
+      height: 20
+    spriteID: 854a611047fd9d942b7526dd772c982c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 30, y: 91}
+  - name: ogre master - export_Frame_17
+    originalName: 
+    pivot: {x: 0.5, y: -1.15}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 56
+      y: 91
+      width: 18
+      height: 20
+    spriteID: 4a9bb6a96f35456488cbbf93d54849f5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 56, y: 91}
+  - name: ogre master - export_Frame_18
+    originalName: 
+    pivot: {x: 0.5, y: -1.0952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 223
+      y: 33
+      width: 18
+      height: 21
+    spriteID: 11831932996e6fc459f38abeb518b3e0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 223, y: 33}
+  - name: ogre master - export_Frame_19
+    originalName: 
+    pivot: {x: 0.5, y: -1.15}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 82
+      y: 91
+      width: 18
+      height: 20
+    spriteID: 1a8daa8cef96e8f448d418ad3ebaf3d2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 82, y: 91}
+  - name: ogre master - export_Frame_20
+    originalName: 
+    pivot: {x: 0.5, y: -1.15}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 108
+      y: 91
+      width: 18
+      height: 20
+    spriteID: 4fb5f5e7614782c468946337ae1a709e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 108, y: 91}
+  - name: ogre master - export_Frame_21
+    originalName: 
+    pivot: {x: 0.5, y: -1.15}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 134
+      y: 91
+      width: 18
+      height: 20
+    spriteID: 5db7878fb60c3394cb986bf5d24cbf86
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 134, y: 91}
+  - name: ogre master - export_Frame_22
+    originalName: 
+    pivot: {x: 0.5, y: -1.0952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 62
+      width: 18
+      height: 21
+    spriteID: 4e4e4ae9014478948acf8b3c2702eab8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 62}
+  - name: ogre master - export_Frame_23
+    originalName: 
+    pivot: {x: 0.39130434, y: -1.0952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 228
+      y: 4
+      width: 23
+      height: 21
+    spriteID: 074703a3afac0894a823605168baa517
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 228, y: 4}
+  - name: ogre master - export_Frame_24
+    originalName: 
+    pivot: {x: 0.375, y: -1.0952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 24
+      height: 21
+    spriteID: 086c6b8151ac5ac4595b1e9669fbcede
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: ogre master - export_Frame_25
+    originalName: 
+    pivot: {x: 0.375, y: -1.0952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 36
+      y: 4
+      width: 24
+      height: 21
+    spriteID: 85650f18c008e7645930cda6f53a9b72
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 36, y: 4}
+  - name: ogre master - export_Frame_26
+    originalName: 
+    pivot: {x: 0.375, y: -1.0952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 68
+      y: 4
+      width: 24
+      height: 21
+    spriteID: 01a52029b8249a940a4e47b129d8dca8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 68, y: 4}
+  - name: ogre master - export_Frame_27
+    originalName: 
+    pivot: {x: 0.375, y: -1.0952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 100
+      y: 4
+      width: 24
+      height: 21
+    spriteID: 28071433e30a28844a2a764f9a473212
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 100, y: 4}
+  - name: ogre master - export_Frame_28
+    originalName: 
+    pivot: {x: 0.375, y: -1.0952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 132
+      y: 4
+      width: 24
+      height: 21
+    spriteID: 3495fdd4a9190364ab72b70739ef67d6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 132, y: 4}
+  - name: ogre master - export_Frame_29
+    originalName: 
+    pivot: {x: 0.375, y: -1.0952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 164
+      y: 4
+      width: 24
+      height: 21
+    spriteID: 44caf84c4f7a36349bbf483f5711fb22
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 164, y: 4}
+  - name: ogre master - export_Frame_30
+    originalName: 
+    pivot: {x: 0.375, y: -1.0952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 196
+      y: 4
+      width: 24
+      height: 21
+    spriteID: 12996586a32c7194f8b4f536fa66bb79
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 196, y: 4}
+  - name: ogre master - export_Frame_31
+    originalName: 
+    pivot: {x: 0.39130434, y: -1.0952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 33
+      width: 23
+      height: 21
+    spriteID: b601e7f318f2cb547a40ccb0e662e291
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 33}
+  - name: ogre master - export_Frame_32
+    originalName: 
+    pivot: {x: 0.5, y: -1.0952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 30
+      y: 62
+      width: 18
+      height: 21
+    spriteID: 1e8960dc823a8ed40ac5ae192c3b7367
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 30, y: 62}
+  - name: ogre master - export_Frame_33
+    originalName: 
+    pivot: {x: 0.5, y: -1.0952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 56
+      y: 62
+      width: 18
+      height: 21
+    spriteID: 3c23128a598ec3e4da5d4bad5877b77e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 56, y: 62}
+  - name: ogre master - export_Frame_34
+    originalName: 
+    pivot: {x: 0.5, y: -1.15}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 91
+      width: 18
+      height: 20
+    spriteID: d15b6feb94a062549ae4ab26a8b4d178
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 160, y: 91}
+  - name: ogre master - export_Frame_35
+    originalName: 
+    pivot: {x: 0.5, y: -1.15}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 186
+      y: 91
+      width: 18
+      height: 20
+    spriteID: 68cde1fdbe2923745abccc75ac97b3e5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 186, y: 91}
+  - name: ogre master - export_Frame_36
+    originalName: 
+    pivot: {x: 0.5, y: -1.15}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 212
+      y: 91
+      width: 18
+      height: 20
+    spriteID: 20a4db56c5f1cfd4087fdac1e56dab74
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 212, y: 91}
+  - name: ogre master - export_Frame_37
+    originalName: 
+    pivot: {x: 0.5, y: -1.0952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 82
+      y: 62
+      width: 18
+      height: 21
+    spriteID: 59e1ef982eb17af458f0aa1ea3858f98
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 82, y: 62}
+  - name: ogre master - export_Frame_38
+    originalName: 
+    pivot: {x: 0.5, y: -1.15}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 119
+      width: 18
+      height: 20
+    spriteID: d392e78ce2a8fbf47ac8630cb3c4ea41
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 119}
+  - name: ogre master - export_Frame_39
+    originalName: 
+    pivot: {x: 0.5, y: -1.15}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 30
+      y: 119
+      width: 18
+      height: 20
+    spriteID: 0c7ba84b378b0234388203f7b5a9be39
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 30, y: 119}
+  - name: ogre master - export_Frame_40
+    originalName: 
+    pivot: {x: 0.5, y: -1.15}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 56
+      y: 119
+      width: 18
+      height: 20
+    spriteID: 3667e33f389dd644fa2fd7485ac9e926
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 56, y: 119}
+  - name: ogre master - export_Frame_41
+    originalName: 
+    pivot: {x: 0.5, y: -1.0952381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 108
+      y: 62
+      width: 18
+      height: 21
+    spriteID: 60193b6d9243a714792151002c451080
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 108, y: 62}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 1446542672
+    name: ogre master - export
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: ogre master - export_Frame_0
+      frameIndex: 0
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 18
+        height: 21
+      spriteId: bb1bcb9f8612d404a8b9ae262df7d539
+    - name: ogre master - export_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 18
+        height: 20
+      spriteId: fb8af95869daa1e48aab434c7b201978
+    - name: ogre master - export_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 18
+        height: 20
+      spriteId: 526f257cdf3bd9a4780261d197181b80
+    - name: ogre master - export_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 18
+        height: 20
+      spriteId: a21911f9289ef0b4b9a4b1eda95d3267
+    - name: ogre master - export_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 18
+        height: 21
+      spriteId: e4cb6cdf6fbfb73408659fcf64f1f41d
+    - name: ogre master - export_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 22
+        y: 23
+        width: 20
+        height: 21
+      spriteId: 10a2de0038a2158409b7b00b380658ea
+    - name: ogre master - export_Frame_6
+      frameIndex: 6
+      additiveSortOrder: 0
+      cellRect:
+        x: 22
+        y: 23
+        width: 21
+        height: 19
+      spriteId: 840f589238f44bd4cbff662168755368
+    - name: ogre master - export_Frame_7
+      frameIndex: 7
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 18
+        height: 20
+      spriteId: 15679bd1f52f5494e8e30cddd26e9585
+    - name: ogre master - export_Frame_8
+      frameIndex: 8
+      additiveSortOrder: 0
+      cellRect:
+        x: 24
+        y: 23
+        width: 16
+        height: 21
+      spriteId: 38cfe866de019f14f825fbd6933f0171
+    - name: ogre master - export_Frame_9
+      frameIndex: 9
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 16
+        height: 21
+      spriteId: c4c262ed884a4e8499daef69e0f41e97
+    - name: ogre master - export_Frame_10
+      frameIndex: 10
+      additiveSortOrder: 0
+      cellRect:
+        x: 24
+        y: 23
+        width: 14
+        height: 19
+      spriteId: 12c85c4b03f90c8498a6543a07bbfcbe
+    - name: ogre master - export_Frame_11
+      frameIndex: 11
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 18
+        height: 19
+      spriteId: 75a044e44286c7b438ef62643e1b7a48
+    - name: ogre master - export_Frame_12
+      frameIndex: 12
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 19
+        height: 20
+      spriteId: baf0224a0e289624e897536b440dbe44
+    - name: ogre master - export_Frame_13
+      frameIndex: 13
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 18
+        height: 21
+      spriteId: 0911f86a2b0032a4786c1e0ef583e809
+    - name: ogre master - export_Frame_14
+      frameIndex: 14
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 18
+        height: 21
+      spriteId: 982908ef0ccd7b8408c4f3783f78123c
+    - name: ogre master - export_Frame_15
+      frameIndex: 15
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 18
+        height: 20
+      spriteId: 703effc1dbb440d40a81b4ca1671f865
+    - name: ogre master - export_Frame_16
+      frameIndex: 16
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 18
+        height: 20
+      spriteId: 854a611047fd9d942b7526dd772c982c
+    - name: ogre master - export_Frame_17
+      frameIndex: 17
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 18
+        height: 20
+      spriteId: 4a9bb6a96f35456488cbbf93d54849f5
+    - name: ogre master - export_Frame_18
+      frameIndex: 18
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 18
+        height: 21
+      spriteId: 11831932996e6fc459f38abeb518b3e0
+    - name: ogre master - export_Frame_19
+      frameIndex: 19
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 18
+        height: 20
+      spriteId: 1a8daa8cef96e8f448d418ad3ebaf3d2
+    - name: ogre master - export_Frame_20
+      frameIndex: 20
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 18
+        height: 20
+      spriteId: 4fb5f5e7614782c468946337ae1a709e
+    - name: ogre master - export_Frame_21
+      frameIndex: 21
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 18
+        height: 20
+      spriteId: 5db7878fb60c3394cb986bf5d24cbf86
+    - name: ogre master - export_Frame_22
+      frameIndex: 22
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 18
+        height: 21
+      spriteId: 4e4e4ae9014478948acf8b3c2702eab8
+    - name: ogre master - export_Frame_23
+      frameIndex: 23
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 23
+        height: 21
+      spriteId: 074703a3afac0894a823605168baa517
+    - name: ogre master - export_Frame_24
+      frameIndex: 24
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 24
+        height: 21
+      spriteId: 086c6b8151ac5ac4595b1e9669fbcede
+    - name: ogre master - export_Frame_25
+      frameIndex: 25
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 24
+        height: 21
+      spriteId: 85650f18c008e7645930cda6f53a9b72
+    - name: ogre master - export_Frame_26
+      frameIndex: 26
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 24
+        height: 21
+      spriteId: 01a52029b8249a940a4e47b129d8dca8
+    - name: ogre master - export_Frame_27
+      frameIndex: 27
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 24
+        height: 21
+      spriteId: 28071433e30a28844a2a764f9a473212
+    - name: ogre master - export_Frame_28
+      frameIndex: 28
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 24
+        height: 21
+      spriteId: 3495fdd4a9190364ab72b70739ef67d6
+    - name: ogre master - export_Frame_29
+      frameIndex: 29
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 24
+        height: 21
+      spriteId: 44caf84c4f7a36349bbf483f5711fb22
+    - name: ogre master - export_Frame_30
+      frameIndex: 30
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 24
+        height: 21
+      spriteId: 12996586a32c7194f8b4f536fa66bb79
+    - name: ogre master - export_Frame_31
+      frameIndex: 31
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 23
+        height: 21
+      spriteId: b601e7f318f2cb547a40ccb0e662e291
+    - name: ogre master - export_Frame_32
+      frameIndex: 32
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 18
+        height: 21
+      spriteId: 1e8960dc823a8ed40ac5ae192c3b7367
+    - name: ogre master - export_Frame_33
+      frameIndex: 33
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 18
+        height: 21
+      spriteId: 3c23128a598ec3e4da5d4bad5877b77e
+    - name: ogre master - export_Frame_34
+      frameIndex: 34
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 18
+        height: 20
+      spriteId: d15b6feb94a062549ae4ab26a8b4d178
+    - name: ogre master - export_Frame_35
+      frameIndex: 35
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 18
+        height: 20
+      spriteId: 68cde1fdbe2923745abccc75ac97b3e5
+    - name: ogre master - export_Frame_36
+      frameIndex: 36
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 18
+        height: 20
+      spriteId: 20a4db56c5f1cfd4087fdac1e56dab74
+    - name: ogre master - export_Frame_37
+      frameIndex: 37
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 18
+        height: 21
+      spriteId: 59e1ef982eb17af458f0aa1ea3858f98
+    - name: ogre master - export_Frame_38
+      frameIndex: 38
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 18
+        height: 20
+      spriteId: d392e78ce2a8fbf47ac8630cb3c4ea41
+    - name: ogre master - export_Frame_39
+      frameIndex: 39
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 18
+        height: 20
+      spriteId: 0c7ba84b378b0234388203f7b5a9be39
+    - name: ogre master - export_Frame_40
+      frameIndex: 40
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 18
+        height: 20
+      spriteId: 3667e33f389dd644fa2fd7485ac9e926
+    - name: ogre master - export_Frame_41
+      frameIndex: 41
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 23
+        width: 18
+        height: 21
+      spriteId: 60193b6d9243a714792151002c451080
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: iPhone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: WebGL
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 64, y: 64}

@@ -11,6 +11,9 @@ public class EnemyManager : MonoBehaviour
     [SerializeField]private GameObject winPanel;
     [SerializeField]private GameObject losePanel;
     [SerializeField]private GameObject enemyWarning;
+    [SerializeField]private AudioSource panelSound;
+    [SerializeField]private AudioClip winSound;
+    [SerializeField]private AudioClip loseSound;
 
 
 
@@ -25,7 +28,7 @@ public class EnemyManager : MonoBehaviour
         {
             Instance = this;
         }
-        //enemy = GameObject.FindGameObjectWithTag("Enemy");
+        panelSound = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -60,6 +63,8 @@ public class EnemyManager : MonoBehaviour
         spawnTimer = 300;
         enemyWarning.SetActive (false);
         DialogueManager.Instance.GetComponent<DialogueManager>().isDialogueActive = true;
+        panelSound.clip = winSound;
+        panelSound.Play();
         winPanel.SetActive(true);
         Debug.Log("YOU ARE WINRAR!");
     }
@@ -74,6 +79,8 @@ public class EnemyManager : MonoBehaviour
         spawnTimer = 300;
         enemyWarning.SetActive(false);
         DialogueManager.Instance.GetComponent<DialogueManager>().isDialogueActive = true;
+        panelSound.clip = loseSound;
+        panelSound.Play();
         losePanel.SetActive(true);
     }
 
