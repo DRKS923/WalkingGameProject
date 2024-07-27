@@ -7,7 +7,6 @@ public class EventManager : MonoBehaviour
     public static EventManager Instance;
     public List<GameObject> eventList = new List<GameObject>();
     [SerializeField]int listNumber;
-    public StepCounter stepCounter;
     bool isEventLive = false;
     [SerializeField]public GameObject currentEvent = null;
     
@@ -36,7 +35,7 @@ public class EventManager : MonoBehaviour
 
     void Update()
     {
-        if (stepCounter.Steps % 200 == 0 && !isEventLive)
+        if (StepCounter.Instance.GetComponent<StepCounter>().Steps % 200 == 0 && !isEventLive)
         {
             SpawnEvent();
         }

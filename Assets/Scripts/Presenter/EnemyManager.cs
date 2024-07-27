@@ -59,12 +59,22 @@ public class EnemyManager : MonoBehaviour
         isEnemyLive = false;
         spawnTimer = 300;
         enemyWarning.SetActive (false);
+        DialogueManager.Instance.GetComponent<DialogueManager>().isDialogueActive = true;
+        winPanel.SetActive(true);
         Debug.Log("YOU ARE WINRAR!");
     }
 
     void PlayerIsKill()
     {
         Debug.Log("YOU LOSE, GOOD DAY SIR.");
+        enemy.transform.position = enemy.GetComponent<Enemy>().originalPos.position;
+        enemy.GetComponent<Enemy>().canMove = false;
+        enemy.SetActive(false);
+        isEnemyLive = false;
+        spawnTimer = 300;
+        enemyWarning.SetActive(false);
+        DialogueManager.Instance.GetComponent<DialogueManager>().isDialogueActive = true;
+        losePanel.SetActive(true);
     }
 
     public static void Fight(GameObject player)
@@ -93,6 +103,7 @@ public class EnemyManager : MonoBehaviour
         {
             losePanel.SetActive(false);
         }
+        DialogueManager.Instance.GetComponent<DialogueManager>().isDialogueActive = false;
     }
 
 }

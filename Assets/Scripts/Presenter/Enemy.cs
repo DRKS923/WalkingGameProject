@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
     public Transform originalPos;
     public float timerSeconds;
 
-    private void Awake()
+    private void OnEnable()
     {
         canMove = true;
         transform.position = originalPos.position;
@@ -31,12 +31,12 @@ public class Enemy : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Collision detected");
-        if (collision.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
             EnemyManager.Fight(collision.gameObject);
             Debug.Log("Fight Detected");
         }
-        if (collision.tag == "Barrier")
+        if (collision.CompareTag("Barrier"))
         {
             canMove = false;
             transform.position = originalPos.position;

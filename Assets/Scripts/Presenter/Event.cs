@@ -11,9 +11,9 @@ public class Event : MonoBehaviour
     public Animator animator;
     public AudioSource spawnNotif;
     public GameObject playerCharacter;
-    public PlayerLevel playerLevel;
+    public PlayerLevel playerLevelScript;
 
-    void Start()
+    void OnEnable()
     {
         canMove = true;
         transform.position = originalPos.position;
@@ -22,7 +22,7 @@ public class Event : MonoBehaviour
         spawnNotif = GetComponent<AudioSource>();
         spawnNotif.Play();
         playerCharacter = GameObject.FindGameObjectWithTag("Player");
-        playerLevel = playerCharacter.GetComponent<PlayerLevel>();
+        playerLevelScript = playerCharacter.GetComponent<PlayerLevel>();
     }
 
     public void MoveEvent()
@@ -37,16 +37,22 @@ public class Event : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
             dialogueTrigger.TriggerDialogue();
-            playerLevel.currentExp = playerLevel.currentExp + 50;
+            playerLevelScript.currentExp += ExpCalc(playerLevelScript.playerLevel); ;
         }
-        if (collision.tag == "Barrier")
+        if (collision.CompareTag("Barrier"))
         {
             canMove = false;
             transform.position = originalPos.position;
             this.gameObject.SetActive(false);
         }
+    }
+
+    int ExpCalc(int level)
+    {
+        int expToGive = 50 + ((level - 1) * 10);
+        return expToGive;
     }
 }
