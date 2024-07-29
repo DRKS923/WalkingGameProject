@@ -9,10 +9,32 @@ public class GameData
     public int currentExp;
     public int steps;
 
+    public float enemyTimer;
+    public int enemyLevel;
+    public Vector3 enemyPosition;
+    public SerializableDictionary<string, bool> enemyStatus;
+
+    public Vector3 eventPosition;
+    public bool currentEventStatus;
+    public bool canTalk;
+    public string currentEventId;
+
+
     public GameData() 
     {
         this.level = 1;
         this.currentExp = 0;
         this.steps = 0;
+
+        this.enemyTimer = 300;
+        this.enemyLevel = 0;
+        this.enemyPosition = Vector3.zero;
+        enemyStatus = new SerializableDictionary<string, bool>();
+
+        this.eventPosition = Vector3.zero;
+        this.currentEventStatus = false;
+        this.canTalk = false;
+        this.currentEventId = "";
+        
     }
 }

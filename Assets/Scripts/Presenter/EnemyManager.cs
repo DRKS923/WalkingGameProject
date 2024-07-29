@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyManager : MonoBehaviour
+public class EnemyManager : MonoBehaviour, IDataPersistence
 {
     public static EnemyManager Instance;
     public GameObject enemy;
@@ -14,6 +14,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField]private AudioSource panelSound;
     [SerializeField]private AudioClip winSound;
     [SerializeField]private AudioClip loseSound;
+    private string currentEnemyId;
 
 
 
@@ -29,6 +30,7 @@ public class EnemyManager : MonoBehaviour
             Instance = this;
         }
         panelSound = GetComponent<AudioSource>();
+        currentEnemyId = enemy.GetComponent<Enemy>().enemyId;
     }
 
     void Update()
@@ -44,7 +46,6 @@ public class EnemyManager : MonoBehaviour
             EnemySpawn();
             enemyWarning.SetActive(true);
         }
-        
     }
 
     void EnemySpawn()
@@ -52,6 +53,7 @@ public class EnemyManager : MonoBehaviour
         enemy.SetActive(true);
         isEnemyLive = true;
         enemy.GetComponent<Enemy>().canMove = true;
+        enemy.GetComponent<Enemy>().LevelEnemy(PlayerManager.Instance.GetComponent<PlayerManager>().playerLevel);
     }
 
     public void EnemyIsKill()
@@ -84,9 +86,9 @@ public class EnemyManager : MonoBehaviour
         losePanel.SetActive(true);
     }
 
-    public static void Fight(GameObject player)
+    public static void Fight()
     {
-        int playerLevel = player.GetComponent<PlayerLevel>().playerLevel;
+        int playerLevel = PlayerManager.Instance.GetComponent<PlayerManager>().playerLevel;
         int enemyLevel = Instance.enemy.GetComponent<Enemy>().currentLevel;
 
         if (playerLevel < enemyLevel) 
@@ -113,4 +115,24 @@ public class EnemyManager : MonoBehaviour
         DialogueManager.Instance.GetComponent<DialogueManager>().isDialogueActive = false;
     }
 
+    public void LoadData(GameData data)
+    {
+        spawnTimer = data.enemyTimer;
+        data.enemyStatus.TryGetValue(currentEnemyId, out isEnemyLive);
+        enemy.SetActive(isEnemyLive);
+        enemy.transform.position = data.enemyPosition;
+        enemy.GetComponent<Enemy>().currentLevel = data.enemyLevel;
+    }
+
+    public void SaveData(GameData data)
+    {
+        data.enemyTimer = spawnTimer;
+        data.enemyPosition = enemy.transform.position;
+        if (data.enemyStatus.ContainsKey(currentEnemyId))
+        {
+            data.enemyStatus.Remove(currentEnemyId);
+        }
+        data.enemyStatus.Add(currentEnemyId, isEnemyLive);
+        data.enemyLevel = enemy.GetComponent<Enemy>().currentLevel;
+    }
 }

@@ -8,21 +8,26 @@ public class Event : MonoBehaviour
     public Transform originalPos;
     public DialogueTrigger dialogueTrigger;
     public bool canMove = false;
+    public bool canTalk = false;
     public Animator animator;
     public AudioSource spawnNotif;
-    public GameObject playerCharacter;
-    public PlayerLevel playerLevelScript;
+    public string eventId;
+
+    [ContextMenu("Generate guid for id")]
+    private void GenerateGuid()
+    {
+        eventId = System.Guid.NewGuid().ToString();
+    }
 
     void OnEnable()
     {
         canMove = true;
+        canTalk = true;
         transform.position = originalPos.position;
         dialogueTrigger = GetComponent<DialogueTrigger>();
         animator = GetComponent<Animator>();
         spawnNotif = GetComponent<AudioSource>();
         spawnNotif.Play();
-        playerCharacter = GameObject.FindGameObjectWithTag("Player");
-        playerLevelScript = playerCharacter.GetComponent<PlayerLevel>();
     }
 
     public void MoveEvent()
@@ -39,8 +44,13 @@ public class Event : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            dialogueTrigger.TriggerDialogue();
-            playerLevelScript.currentExp += ExpCalc(playerLevelScript.playerLevel); ;
+            if (canTalk)
+            {
+                dialogueTrigger.TriggerDialogue();
+                canTalk = false;
+            }
+
+            PlayerManager.Instance.GetComponent<PlayerManager>().currentExp += ExpCalc(PlayerManager.Instance.GetComponent<PlayerManager>().playerLevel); ;
         }
         if (collision.CompareTag("Barrier"))
         {

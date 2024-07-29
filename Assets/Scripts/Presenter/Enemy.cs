@@ -7,18 +7,24 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField]private float _x;
     public int currentLevel = 0;
-    [SerializeField]private int lastLevel = 1;
+    public int nextLevel = 1;
     public bool canMove = false;
     public Transform originalPos;
     public float timerSeconds;
     [SerializeField]private Animator animator;
     [SerializeField]private AudioSource spawnNotif;
+    public string enemyId;
+
+    [ContextMenu("Generate guid for id")]
+    private void GenerateGuid()
+    {
+        enemyId = System.Guid.NewGuid().ToString();
+    }
 
     private void OnEnable()
     {
         canMove = true;
         transform.position = originalPos.position;
-        LevelEnemy();
         animator = GetComponentInChildren<Animator>();
         spawnNotif = GetComponent<AudioSource>();
         spawnNotif.Play();
@@ -39,7 +45,7 @@ public class Enemy : MonoBehaviour
         Debug.Log("Collision detected");
         if (collision.CompareTag("Player"))
         {
-            EnemyManager.Fight(collision.gameObject);
+            EnemyManager.Fight();
             Debug.Log("Fight Detected");
         }
         if (collision.CompareTag("Barrier"))
@@ -47,13 +53,14 @@ public class Enemy : MonoBehaviour
             canMove = false;
             transform.position = originalPos.position;
             this.gameObject.SetActive(false);
+            EnemyManager.Instance.GetComponent<EnemyManager>().spawnTimer = 300;
         }
     }
 
-    void LevelEnemy()
+    public void LevelEnemy(int pLevel)
     {
-        currentLevel += lastLevel;
-        lastLevel++;
+        currentLevel = nextLevel;
+        nextLevel++;
     }
 
 }

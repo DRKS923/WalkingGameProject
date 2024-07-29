@@ -13,8 +13,18 @@ public class EnemyTimer : MonoBehaviour
     
     void Update()
     {
-        displayNumber = FormatTime(EnemyManager.Instance.GetComponent<EnemyManager>().spawnTimer);
-        counterNumberText.text = displayNumber;
+        if(EnemyManager.Instance.GetComponent<EnemyManager>().spawnTimer > 0)
+        {
+            displayNumber = FormatTime(EnemyManager.Instance.GetComponent<EnemyManager>().spawnTimer);
+            counterNumberText.text = displayNumber;
+        }
+        else
+        {
+            counterNumberText.text = "Incoming";
+        }
+        
+        
+        
     }
 
     string FormatTime(float timer)

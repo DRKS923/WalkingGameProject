@@ -70,10 +70,11 @@
     <Compile Include="Assets\Scripts\Presenter\BGMManager.cs" />
     <Compile Include="Assets\Scripts\Presenter\DialogueTrigger.cs" />
     <Compile Include="Assets\Scripts\Model\FileDataHandler.cs" />
-    <Compile Include="Assets\Scripts\Presenter\PlayerLevel.cs" />
+    <Compile Include="Assets\Scripts\Presenter\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\Presenter\EventManager.cs" />
     <Compile Include="Assets\Scripts\Presenter\StepCounter.cs" />
     <Compile Include="Assets\Scripts\Presenter\Event.cs" />
+    <Compile Include="Assets\Scripts\Model\SerializableTypes\SerializableDictionary.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
