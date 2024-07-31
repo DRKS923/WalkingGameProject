@@ -53,7 +53,7 @@ public class EnemyManager : MonoBehaviour, IDataPersistence
         enemy.SetActive(true);
         isEnemyLive = true;
         enemy.GetComponent<Enemy>().canMove = true;
-        enemy.GetComponent<Enemy>().LevelEnemy(PlayerManager.Instance.GetComponent<PlayerManager>().playerLevel);
+        enemy.GetComponent<Enemy>().LevelEnemy();
     }
 
     public void EnemyIsKill()

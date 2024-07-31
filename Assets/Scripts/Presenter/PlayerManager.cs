@@ -54,15 +54,15 @@ public class PlayerManager : MonoBehaviour, IDataPersistence
     }
 
 
-    private int TargetExpCalc(int currentLevel)
+    public int TargetExpCalc(int currentLevel)
     {
-        int nextLevel = currentLevel - 1;
+        int prevLevel = currentLevel - 1;
         int firstPass = 0;
         int secondPass = 0;
         int thirdPass = 0;
 
 
-        firstPass += (int)Math.Floor(nextLevel + (300.0f * Math.Pow(2.0f, nextLevel / 7.0f)));
+        firstPass += (int)Math.Floor(prevLevel + (300.0f * Math.Pow(2.0f, prevLevel / 7.0f)));
         secondPass = firstPass / 40;
         thirdPass = secondPass * 10;
 

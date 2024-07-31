@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField]private float _x;
     public int currentLevel = 0;
-    public int nextLevel = 1;
+    [SerializeField]private int enemyCycle = 1;
     public bool canMove = false;
     public Transform originalPos;
     public float timerSeconds;
@@ -57,10 +57,28 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void LevelEnemy(int pLevel)
+    public void LevelEnemy()
     {
-        currentLevel = nextLevel;
-        nextLevel++;
+        if (enemyCycle < 30)
+        {
+            currentLevel++;
+        }
+        else if (enemyCycle >= 30)
+        {
+            currentLevel += 2;
+        }
+        else if (enemyCycle >= 40)
+        {
+            currentLevel += 3;
+        }
+        else if(enemyCycle >= 50)
+        {
+            currentLevel += 4;  
+        }
+
+        //better system
+        
+        enemyCycle++;
     }
 
 }
