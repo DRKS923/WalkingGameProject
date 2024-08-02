@@ -11,6 +11,9 @@ public class PlayerManager : MonoBehaviour, IDataPersistence
     public int currentExp;
     public int targetExp;
 
+    public bool allowMusic = true;
+    public bool allowSfx = true;
+
     void Start()
     {
         if (Instance != null && Instance != this)
@@ -38,12 +41,18 @@ public class PlayerManager : MonoBehaviour, IDataPersistence
     {
        playerLevel = data.level;
        currentExp = data.currentExp;
+
+       allowMusic = data.allowMusic;
+       allowSfx = data.allowSfx;
     }
 
     public void SaveData(GameData data)
     {
         data.level = playerLevel;
         data.currentExp = currentExp;
+
+        data.allowMusic = allowMusic;
+        data.allowSfx = allowSfx;
     }
 
     void Levelup()

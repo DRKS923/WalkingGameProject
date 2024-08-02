@@ -14,6 +14,7 @@ public class StepCounter : MonoBehaviour, IDataPersistence
     public static StepCounter Instance;
     public TMP_Text counterText;
     public BackgroundScroll scroller;
+    public bool isMenuOpen = false;
     public int prevSteps;
     [SerializeField]private int steps;
     
@@ -92,7 +93,7 @@ public class StepCounter : MonoBehaviour, IDataPersistence
 
     public void TakeStep() 
     {
-        if (!dialogueManager.isDialogueActive)
+        if (!dialogueManager.isDialogueActive && !isMenuOpen)
         {
             Steps++;
         }

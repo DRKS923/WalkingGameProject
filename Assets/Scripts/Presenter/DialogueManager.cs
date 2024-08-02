@@ -69,7 +69,10 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in dialogueLine.line.ToCharArray() )
         {
             dialogueArea.text += letter;
-            textSound.Play();
+            if(PlayerManager.Instance.allowSfx)
+            {
+                textSound.Play();
+            }        
             yield return new WaitForSeconds(typingSpeed);
         }
     }

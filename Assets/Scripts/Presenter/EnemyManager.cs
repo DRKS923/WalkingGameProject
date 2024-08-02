@@ -35,7 +35,7 @@ public class EnemyManager : MonoBehaviour, IDataPersistence
 
     void Update()
     {
-        if (spawnTimer > 0)
+        if (spawnTimer > 0 && !StepCounter.Instance.isMenuOpen)
         {
             spawnTimer -= Time.deltaTime;
         }
@@ -64,9 +64,12 @@ public class EnemyManager : MonoBehaviour, IDataPersistence
         isEnemyLive = false;
         spawnTimer = 300;
         enemyWarning.SetActive (false);
-        DialogueManager.Instance.GetComponent<DialogueManager>().isDialogueActive = true;
+        DialogueManager.Instance.isDialogueActive = true;
         panelSound.clip = winSound;
-        panelSound.Play();
+        if (PlayerManager.Instance.allowSfx)
+        {
+            panelSound.Play();
+        }
         winPanel.SetActive(true);
         Debug.Log("YOU ARE WINRAR!");
     }
@@ -80,15 +83,19 @@ public class EnemyManager : MonoBehaviour, IDataPersistence
         isEnemyLive = false;
         spawnTimer = 300;
         enemyWarning.SetActive(false);
-        DialogueManager.Instance.GetComponent<DialogueManager>().isDialogueActive = true;
+        DialogueManager.Instance.isDialogueActive = true;
+        
         panelSound.clip = loseSound;
-        panelSound.Play();
+        if (PlayerManager.Instance.allowSfx)
+        {
+            panelSound.Play();
+        }    
         losePanel.SetActive(true);
     }
 
     public static void Fight()
     {
-        int playerLevel = PlayerManager.Instance.GetComponent<PlayerManager>().playerLevel;
+        int playerLevel = PlayerManager.Instance.playerLevel;
         int enemyLevel = Instance.enemy.GetComponent<Enemy>().currentLevel;
 
         if (playerLevel < enemyLevel) 
@@ -112,7 +119,7 @@ public class EnemyManager : MonoBehaviour, IDataPersistence
         {
             losePanel.SetActive(false);
         }
-        DialogueManager.Instance.GetComponent<DialogueManager>().isDialogueActive = false;
+        DialogueManager.Instance.isDialogueActive = false;
     }
 
     public void LoadData(GameData data)
@@ -122,6 +129,7 @@ public class EnemyManager : MonoBehaviour, IDataPersistence
         enemy.SetActive(isEnemyLive);
         enemy.transform.position = data.enemyPosition;
         enemy.GetComponent<Enemy>().currentLevel = data.enemyLevel;
+        enemy.GetComponent<Enemy>().enemyCycle = data.enemyCycle;
     }
 
     public void SaveData(GameData data)
@@ -134,5 +142,6 @@ public class EnemyManager : MonoBehaviour, IDataPersistence
         }
         data.enemyStatus.Add(currentEnemyId, isEnemyLive);
         data.enemyLevel = enemy.GetComponent<Enemy>().currentLevel;
+        data.enemyCycle = enemy.GetComponent<Enemy>().enemyCycle;
     }
 }

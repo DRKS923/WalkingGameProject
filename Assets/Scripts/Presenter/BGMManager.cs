@@ -5,23 +5,32 @@ using UnityEngine;
 public class BGMManager : MonoBehaviour
 {
     public AudioSource music;
-    public bool isPlaying = true;
-    void Start()
+    void OnEnable()
     {
-        music = GetComponent<AudioSource>();
-        music.Play();
+        if (PlayerManager.Instance.allowMusic)
+        {
+            music.Play();
+        }
     }
-    
+
+    private void Update()
+    {
+        if (!music.isPlaying && PlayerManager.Instance.allowMusic)
+        {
+            music.Play();
+        }
+    }
+
     public void MusicToggle()
     {
-        if (isPlaying)
+        if (PlayerManager.Instance.allowMusic)
         {
-            isPlaying = false;
+            PlayerManager.Instance.allowMusic = false;
             music.Stop();
         }
-        else if (!isPlaying)
+        else if (!PlayerManager.Instance.allowMusic)
         {
-            isPlaying = true;
+            PlayerManager.Instance.allowMusic = true;
             music.Play();
         }
     }

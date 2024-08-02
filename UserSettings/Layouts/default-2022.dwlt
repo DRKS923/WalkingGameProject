@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Test Runner
+  m_Title: Inspector
   m_RootView: {fileID: 7}
   m_MinSize: {x: 875, y: 321}
   m_MaxSize: {x: 10000, y: 10000}
@@ -43,8 +43,8 @@ MonoBehaviour:
     y: 0
     width: 318
     height: 654
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 25}
   m_Panes:
   - {fileID: 25}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 108
+  controlID: 98
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: TestRunnerWindow
+  m_Name: InspectorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -94,14 +94,14 @@ MonoBehaviour:
     y: 0
     width: 454
     height: 939
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 13}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
   - {fileID: 13}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -147,15 +147,15 @@ MonoBehaviour:
     y: 654
     width: 1466
     height: 285
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 20}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 24}
   m_Panes:
   - {fileID: 20}
   - {fileID: 24}
   - {fileID: 16}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -297,8 +297,8 @@ MonoBehaviour:
     y: 0
     width: 785
     height: 654
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 23}
   m_Panes:
   - {fileID: 23}
@@ -344,7 +344,7 @@ MonoBehaviour:
     m_SaveData: []
     m_OverlaysVisible: 1
   m_Spl:
-    ID: 998
+    ID: 145
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
@@ -369,15 +369,31 @@ MonoBehaviour:
     oldSplitSize: 0
   m_TestTypeToolbarIndex: 1
   m_PlayModeTestListGUI:
-    m_Window: {fileID: 0}
-    m_NewResultList: []
+    m_Window: {fileID: 13}
+    m_NewResultList:
+    - id: 1024
+      uniqueId: '[WalkingGameProject][suite]'
+      name: WalkingGameProject
+      fullName: WalkingGameProject
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
     m_ResultText: 
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 
+      m_ExpandedIDs: ba37eff5ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -401,7 +417,8 @@ MonoBehaviour:
       NotRunHidden: 0
       m_SearchString: 
       selectedCategoryMask: 0
-      availableCategories: []
+      availableCategories:
+      - Uncategorized
     m_SelectedOption: 0
   m_EditModeTestListGUI:
     m_Window: {fileID: 13}
@@ -411,7 +428,7 @@ MonoBehaviour:
       name: WalkingGameProject
       fullName: WalkingGameProject
       resultStatus: 1
-      duration: 0.0394815
+      duration: 0.0390899
       messages: 
       output: 
       stacktrace: 
@@ -427,7 +444,7 @@ MonoBehaviour:
       name: EditMode.dll
       fullName: C:/Users/cnh92/Unity/WalkingGameProject/Library/ScriptAssemblies/EditMode.dll
       resultStatus: 1
-      duration: 0.0207667
+      duration: 0.0202768
       messages: 
       output: 
       stacktrace: 
@@ -439,11 +456,11 @@ MonoBehaviour:
       parentId: 1000
       parentUniqueId: '[WalkingGameProject][suite]'
     - id: 1001
-      uniqueId: EditMode.dll/[EditMode][PlayerManagerTests][suite]
-      name: PlayerManagerTests
-      fullName: PlayerManagerTests
+      uniqueId: EditMode.dll/[EditMode][UnitTesting][suite]
+      name: UnitTesting
+      fullName: UnitTesting
       resultStatus: 1
-      duration: 0.0195792
+      duration: 0.0189068
       messages: 
       output: 
       stacktrace: 
@@ -454,19 +471,14 @@ MonoBehaviour:
       categories: []
       parentId: 1003
       parentUniqueId: '[EditMode][C:/Users/cnh92/Unity/WalkingGameProject/Library/ScriptAssemblies/EditMode.dll][suite]'
-    - id: 1002
-      uniqueId: EditMode.dll/PlayerManagerTests/[EditMode][PlayerManagerTests.ExpToLevelTest]
+    - id: 1003
+      uniqueId: EditMode.dll/UnitTesting/[EditMode][UnitTesting.ExpToLevelTest]
       name: ExpToLevelTest
-      fullName: PlayerManagerTests.ExpToLevelTest
+      fullName: UnitTesting.ExpToLevelTest
       resultStatus: 1
-      duration: 0.0113342
+      duration: 0.0089973
       messages: 
-      output: 'You are trying to create a MonoBehaviour using the ''new'' keyword. 
-        This is not allowed.  MonoBehaviours can only be added using AddComponent().
-        Alternatively, your script can inherit from ScriptableObject or no base class
-        at all
-
-'
+      output: 
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -475,23 +487,31 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1001
-      parentUniqueId: EditMode.dll/[EditMode][PlayerManagerTests][suite]
-    m_ResultText: "IsSingleton (0.008s)\n---\nExpected: null\r\n  But was:  True\n---\nat
-      PlayerManagerTests.IsSingleton () [0x0000b] in C:\\Users\\cnh92\\Unity\\WalkingGameProject\\Assets\\Tests\\EditMode\\PlayerManagerTests.cs:16\n---\nYou
-      are trying to create a MonoBehaviour using the 'new' keyword.  This is not
-      allowed.  MonoBehaviours can only be added using AddComponent(). Alternatively,
-      your script can inherit from ScriptableObject or no base class at all\r\nYou
-      are trying to create a MonoBehaviour using the 'new' keyword.  This is not
-      allowed.  MonoBehaviours can only be added using AddComponent(). Alternatively,
-      your script can inherit from ScriptableObject or no base class at all"
-    m_ResultStacktrace: 'at PlayerManagerTests.IsSingleton () [0x0000b] in C:\Users\cnh92\Unity\WalkingGameProject\Assets\Tests\EditMode\PlayerManagerTests.cs:16
-
-'
+      parentUniqueId: EditMode.dll/[EditMode][UnitTesting][suite]
+    - id: 1002
+      uniqueId: EditMode.dll/UnitTesting/[EditMode][UnitTesting.StepIncrease]
+      name: StepIncrease
+      fullName: UnitTesting.StepIncrease
+      resultStatus: 1
+      duration: 0.0000803
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: EditMode.dll/[EditMode][UnitTesting][suite]
+    m_ResultText: ExpToLevelTest (0.009s)
+    m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 09181c6e
-      m_LastClickedID: 1847334921
-      m_ExpandedIDs: a98712c6ba37eff5b0ab0525ffffff7f
+      m_SelectedIDs: 4256e918
+      m_LastClickedID: 417945154
+      m_ExpandedIDs: a98712c6f94d37d6ba37eff5b0ab0525ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -696,9 +716,9 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 2aa7d6bf7df83194ca37638632a64fd6, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: fbf9e3ccf9192674fb995180f700f7fb, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 8545214728541698305, guid: 2aa7d6bf7df83194ca37638632a64fd6, type: 2}
+  - m_Target: {fileID: 3156508053244145023, guid: fbf9e3ccf9192674fb995180f700f7fb, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -747,7 +767,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 25776
+  m_LastSelectedObjectID: 25766
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -949,7 +969,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Tests/EditMode
+    - Assets/Scripts/Presenter
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -957,16 +977,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Tests/EditMode
+  - Assets/Scripts/Presenter
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\cnh92\Unity\WalkingGameProject
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 259}
-    m_SelectedIDs: c4670000
-    m_LastClickedID: 26564
-    m_ExpandedIDs: 00000000426700004467000046670000486700004a6700004c6700004e670000506700007667000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: f6670000
+    m_LastClickedID: 26614
+    m_ExpandedIDs: 00000000c6670000c8670000ca670000cc670000ce670000d0670000d2670000d4670000d667000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -994,7 +1014,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000426700004467000046670000486700004a6700004c6700004e67000050670000
+    m_ExpandedIDs: 00000000c6670000c8670000ca670000cc670000ce670000d0670000d2670000d4670000d6670000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1019,8 +1039,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 30660000
+    m_LastClickedInstanceID: 26160
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000034610000986900002a690000
     m_RenameOverlay:
@@ -1090,7 +1110,7 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 26566
+  m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
@@ -1134,9 +1154,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: c6670000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 54eaffff8cecffffaaeeffff12fbffff
+      m_SelectedIDs: 6e650000
+      m_LastClickedID: 25966
+      m_ExpandedIDs: 323dffff323effff3e40ffff12fbffff306400007064000086640000be6400006e6500008c6500000c660000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1529,9 +1549,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.93862414, y: 1.9626839, z: -0.011864014}
+    m_Target: {x: 834.13477, y: 1244.2375, z: 3.4708166}
     speed: 2
-    m_Value: {x: -0.93862414, y: 1.9626839, z: -0.011864014}
+    m_Value: {x: 834.13477, y: 1244.2375, z: 3.4708166}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1581,9 +1601,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 9.485105
+    m_Target: 1129.9697
     speed: 2
-    m_Value: 9.485105
+    m_Value: 1129.9697
   m_Ortho:
     m_Target: 1
     speed: 2

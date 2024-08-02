@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -7,13 +8,14 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField]private float _x;
     public int currentLevel = 0;
-    [SerializeField]private int enemyCycle = 1;
+    public int enemyCycle = 1;
     public bool canMove = false;
     public Transform originalPos;
     public float timerSeconds;
     [SerializeField]private Animator animator;
     [SerializeField]private AudioSource spawnNotif;
     public string enemyId;
+    [SerializeField]private TMP_Text levelText;
 
     [ContextMenu("Generate guid for id")]
     private void GenerateGuid()
@@ -27,10 +29,19 @@ public class Enemy : MonoBehaviour
         transform.position = originalPos.position;
         animator = GetComponentInChildren<Animator>();
         spawnNotif = GetComponent<AudioSource>();
-        spawnNotif.Play();
+        if (PlayerManager.Instance.allowSfx)
+        {
+            spawnNotif.Play();
+        }
+        
     }
 
-    
+    private void Update()
+    {
+        levelText.text = "Level: " + currentLevel.ToString();
+    }
+
+
     public void MoveEnemy()
     {
         if (canMove)
@@ -53,7 +64,7 @@ public class Enemy : MonoBehaviour
             canMove = false;
             transform.position = originalPos.position;
             this.gameObject.SetActive(false);
-            EnemyManager.Instance.GetComponent<EnemyManager>().spawnTimer = 300;
+            EnemyManager.Instance.spawnTimer = 300;
         }
     }
 

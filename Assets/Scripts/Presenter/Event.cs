@@ -27,7 +27,11 @@ public class Event : MonoBehaviour
         dialogueTrigger = GetComponent<DialogueTrigger>();
         animator = GetComponent<Animator>();
         spawnNotif = GetComponent<AudioSource>();
-        spawnNotif.Play();
+        if (PlayerManager.Instance.allowSfx)
+        {
+            spawnNotif.Play();
+        }
+
     }
 
     public void MoveEvent()

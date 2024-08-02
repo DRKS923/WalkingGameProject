@@ -38,7 +38,7 @@ public class EventManager : MonoBehaviour, IDataPersistence
 
     void Update()
     {
-        if (StepCounter.Instance.GetComponent<StepCounter>().Steps % 200 == 0 && !isEventLive)
+        if (StepCounter.Instance.Steps % 200 == 0 && !isEventLive)
         {
             SpawnEvent();
         }
@@ -83,6 +83,5 @@ public class EventManager : MonoBehaviour, IDataPersistence
         data.currentEventStatus = isEventLive;
         data.currentEventId = currentEventId;
         data.canTalk = currentEvent.GetComponent<Event>().canTalk;
-
     }
 }
