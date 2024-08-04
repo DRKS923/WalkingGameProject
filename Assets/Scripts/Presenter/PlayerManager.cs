@@ -10,6 +10,7 @@ public class PlayerManager : MonoBehaviour, IDataPersistence
     public int playerLevel;
     public int currentExp;
     public int targetExp;
+    [SerializeField]private AudioSource lvUp;
 
     public bool allowMusic = true;
     public bool allowSfx = true;
@@ -24,6 +25,7 @@ public class PlayerManager : MonoBehaviour, IDataPersistence
         {
             Instance = this;
         }
+        lvUp = GetComponent<AudioSource>();
     }
 
 
@@ -60,6 +62,10 @@ public class PlayerManager : MonoBehaviour, IDataPersistence
         playerLevel++;
         currentExp -= targetExp;
         targetExp = TargetExpCalc(playerLevel);
+        if (allowSfx)
+        {
+            lvUp.Play();
+        }
     }
 
 

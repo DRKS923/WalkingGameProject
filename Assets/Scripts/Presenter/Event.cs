@@ -51,10 +51,11 @@ public class Event : MonoBehaviour
             if (canTalk)
             {
                 dialogueTrigger.TriggerDialogue();
+                PlayerManager.Instance.currentExp += ExpCalc(PlayerManager.Instance.playerLevel);
                 canTalk = false;
             }
 
-            PlayerManager.Instance.GetComponent<PlayerManager>().currentExp += ExpCalc(PlayerManager.Instance.GetComponent<PlayerManager>().playerLevel); ;
+            
         }
         if (collision.CompareTag("Barrier"))
         {

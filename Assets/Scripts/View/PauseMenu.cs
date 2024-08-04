@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField]private int currentPage;
     [SerializeField]private GameObject menu;
     [SerializeField]private GameObject bgmManager;
+    [SerializeField] private GameObject gameUI;
     [SerializeField]private List<GameObject> pages = new();
 
     void Start()
@@ -19,11 +20,13 @@ public class PauseMenu : MonoBehaviour
         if (!StepCounter.Instance.isMenuOpen)
         {
             menu.SetActive(true);
+            gameUI.SetActive(false);
             StepCounter.Instance.isMenuOpen = true;
         }
         else if (StepCounter.Instance.isMenuOpen)
         {
             menu.SetActive(false);
+            gameUI.SetActive(true);
             StepCounter.Instance.isMenuOpen = false;
         }
     }
