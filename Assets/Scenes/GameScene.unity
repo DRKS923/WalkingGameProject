@@ -7273,7 +7273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: data.walk
-  useEncryption: 0
+  useEncryption: 1
 --- !u!1 &1312415060
 GameObject:
   m_ObjectHideFlags: 0

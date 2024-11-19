@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Test Runner
   m_RootView: {fileID: 7}
   m_MinSize: {x: 875, y: 321}
   m_MaxSize: {x: 10000, y: 10000}
@@ -43,8 +43,8 @@ MonoBehaviour:
     y: 0
     width: 318
     height: 654
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 25}
   m_Panes:
   - {fileID: 25}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 98
+  controlID: 114
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: InspectorWindow
+  m_Name: TestRunnerWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -94,14 +94,14 @@ MonoBehaviour:
     y: 0
     width: 454
     height: 939
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 21}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 21}
   - {fileID: 13}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -344,7 +344,7 @@ MonoBehaviour:
     m_SaveData: []
     m_OverlaysVisible: 1
   m_Spl:
-    ID: 145
+    ID: 317
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
@@ -428,7 +428,7 @@ MonoBehaviour:
       name: WalkingGameProject
       fullName: WalkingGameProject
       resultStatus: 1
-      duration: 0.0390899
+      duration: 0.0347964
       messages: 
       output: 
       stacktrace: 
@@ -444,7 +444,7 @@ MonoBehaviour:
       name: EditMode.dll
       fullName: C:/Users/cnh92/Unity/WalkingGameProject/Library/ScriptAssemblies/EditMode.dll
       resultStatus: 1
-      duration: 0.0202768
+      duration: 0.0198079
       messages: 
       output: 
       stacktrace: 
@@ -460,7 +460,7 @@ MonoBehaviour:
       name: UnitTesting
       fullName: UnitTesting
       resultStatus: 1
-      duration: 0.0189068
+      duration: 0.0187042
       messages: 
       output: 
       stacktrace: 
@@ -471,12 +471,131 @@ MonoBehaviour:
       categories: []
       parentId: 1003
       parentUniqueId: '[EditMode][C:/Users/cnh92/Unity/WalkingGameProject/Library/ScriptAssemblies/EditMode.dll][suite]'
-    - id: 1003
-      uniqueId: EditMode.dll/UnitTesting/[EditMode][UnitTesting.ExpToLevelTest]
-      name: ExpToLevelTest
-      fullName: UnitTesting.ExpToLevelTest
+    - id: 1010
+      uniqueId: EditMode.dll/UnitTesting/[EditMode][UnitTesting.EnemyLevel]
+      name: EnemyLevel
+      fullName: UnitTesting.EnemyLevel
       resultStatus: 1
-      duration: 0.0089973
+      duration: 0.0085342
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: EditMode.dll/[EditMode][UnitTesting][suite]
+    - id: 1009
+      uniqueId: EditMode.dll/UnitTesting/[EditMode][UnitTesting.EnemyMove]
+      name: EnemyMove
+      fullName: UnitTesting.EnemyMove
+      resultStatus: 1
+      duration: 0.0001652
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: EditMode.dll/[EditMode][UnitTesting][suite]
+    - id: 1004
+      uniqueId: EditMode.dll/UnitTesting/[EditMode][UnitTesting.EventCanMove]
+      name: EventCanMove
+      fullName: UnitTesting.EventCanMove
+      resultStatus: 1
+      duration: 0.0000721
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: EditMode.dll/[EditMode][UnitTesting][suite]
+    - id: 1007
+      uniqueId: EditMode.dll/UnitTesting/[EditMode][UnitTesting.EventExpCalc]
+      name: EventExpCalc
+      fullName: UnitTesting.EventExpCalc
+      resultStatus: 1
+      duration: 0.0000649
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: EditMode.dll/[EditMode][UnitTesting][suite]
+    - id: 1003
+      uniqueId: EditMode.dll/UnitTesting/[EditMode][UnitTesting.EventHandling]
+      name: EventHandling
+      fullName: UnitTesting.EventHandling
+      resultStatus: 1
+      duration: 0.0000562
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: EditMode.dll/[EditMode][UnitTesting][suite]
+    - id: 1005
+      uniqueId: EditMode.dll/UnitTesting/[EditMode][UnitTesting.Leveling]
+      name: Leveling
+      fullName: UnitTesting.Leveling
+      resultStatus: 1
+      duration: 0.000049
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: EditMode.dll/[EditMode][UnitTesting][suite]
+    - id: 1006
+      uniqueId: EditMode.dll/UnitTesting/[EditMode][UnitTesting.PlayerExpCalc]
+      name: PlayerExpCalc
+      fullName: UnitTesting.PlayerExpCalc
+      resultStatus: 1
+      duration: 0.0000536
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: EditMode.dll/[EditMode][UnitTesting][suite]
+    - id: 1008
+      uniqueId: EditMode.dll/UnitTesting/[EditMode][UnitTesting.SpawnEnemy]
+      name: SpawnEnemy
+      fullName: UnitTesting.SpawnEnemy
+      resultStatus: 1
+      duration: 0.0000711
       messages: 
       output: 
       stacktrace: 
@@ -489,11 +608,11 @@ MonoBehaviour:
       parentId: 1001
       parentUniqueId: EditMode.dll/[EditMode][UnitTesting][suite]
     - id: 1002
-      uniqueId: EditMode.dll/UnitTesting/[EditMode][UnitTesting.StepIncrease]
-      name: StepIncrease
-      fullName: UnitTesting.StepIncrease
+      uniqueId: EditMode.dll/UnitTesting/[EditMode][UnitTesting.StepcountIncrease]
+      name: StepcountIncrease
+      fullName: UnitTesting.StepcountIncrease
       resultStatus: 1
-      duration: 0.0000803
+      duration: 0.0000574
       messages: 
       output: 
       stacktrace: 
@@ -505,12 +624,12 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1001
       parentUniqueId: EditMode.dll/[EditMode][UnitTesting][suite]
-    m_ResultText: ExpToLevelTest (0.009s)
+    m_ResultText: StepIncrease (0.000s)
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 4256e918
-      m_LastClickedID: 417945154
+      m_SelectedIDs: 08866475
+      m_LastClickedID: 1969522184
       m_ExpandedIDs: a98712c6f94d37d6ba37eff5b0ab0525ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -969,7 +1088,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts/View
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -977,16 +1096,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts/View
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\cnh92\Unity\WalkingGameProject
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 586b0000
-    m_LastClickedID: 27480
-    m_ExpandedIDs: 00000000f6680000f8680000fa680000fc680000fe68000000690000026900000469000006690000506b000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 199}
+    m_SelectedIDs: 86690000
+    m_LastClickedID: 27014
+    m_ExpandedIDs: 0000000056690000586900005a6900005c6900005e6900006069000062690000646900006669000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1014,7 +1133,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f6680000f8680000fa680000fc680000fe68000000690000026900000469000006690000
+    m_ExpandedIDs: 0000000056690000586900005a6900005c6900005e69000060690000626900006469000066690000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1154,23 +1273,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 126f0000
+      m_SelectedIDs: 40530000
       m_LastClickedID: 0
-      m_ExpandedIDs: 16afffff92b8fffff2daffff12fbffffa6640000f86400007265000012670000
+      m_ExpandedIDs: 72e9ffff48eeffff78eeffff3ef5ffff66f5ffff12fbffff6c6a0000f86a0000126d00000a760000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Canvas
-        m_OriginalName: Canvas
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -20714
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
@@ -1549,9 +1668,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.7867985, y: 1.483007, z: 90}
+    m_Target: {x: 5.6045537, y: -3.873701, z: 20.059013}
     speed: 2
-    m_Value: {x: 0.7868342, y: 1.4830855, z: 89.99999}
+    m_Value: {x: 5.6045537, y: -3.873701, z: 20.059013}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1601,9 +1720,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 10.928729
+    m_Target: 10
     speed: 2
-    m_Value: 10.928815
+    m_Value: 10
   m_Ortho:
     m_Target: 1
     speed: 2
