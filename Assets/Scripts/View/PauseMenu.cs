@@ -34,6 +34,8 @@ public class PauseMenu : MonoBehaviour
     public void ToMainMenu()
     {
         //save data then change scene to main menu
+        DataPersistanceManager.Instance.SaveGame();
+        UnityEngine.SceneManagement.SceneManager.LoadScene("TitleScene");
     }
 
     public void ToggleMusic()
