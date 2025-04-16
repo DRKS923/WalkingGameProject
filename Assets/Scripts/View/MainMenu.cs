@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField] GameObject MainMenuButtons;
+    [SerializeField] GameObject OptionsMenuButtons;
     public void StartGame()
     {
         // Load the game scene
@@ -11,10 +13,18 @@ public class MainMenu : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
     }
 
-    public void Options()
+    public void OpenOptions()
     {
         // Load the options menu
         // no idea what to put here atm, probably sound control and deleting saves
+        MainMenuButtons.SetActive(false);
+        OptionsMenuButtons.SetActive(true);
+    }
+
+    public void CloseOptions()
+    {
+        MainMenuButtons.SetActive(true);
+        OptionsMenuButtons.SetActive(false);
     }
 
     public void ShareData()

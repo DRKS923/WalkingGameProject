@@ -7,7 +7,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField]private int currentPage;
     [SerializeField]private GameObject menu;
     [SerializeField]private GameObject bgmManager;
-    [SerializeField] private GameObject gameUI;
+    [SerializeField]private GameObject gameUI;
     [SerializeField]private List<GameObject> pages = new();
 
     void Start()
