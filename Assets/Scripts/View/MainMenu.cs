@@ -6,6 +6,8 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] GameObject MainMenuButtons;
     [SerializeField] GameObject OptionsMenuButtons;
+    [SerializeField] GameObject CreditsMenuButtons;
+
     public void StartGame()
     {
         // Load the game scene
@@ -36,5 +38,13 @@ public class MainMenu : MonoBehaviour
     public void OpenCredits()
     {
         // Load the credits scene
+        MainMenuButtons.SetActive(false);
+        CreditsMenuButtons.SetActive(true);
+    }
+
+    public void CloseCredits()
+    {
+        MainMenuButtons.SetActive(true);
+        CreditsMenuButtons.SetActive(false);
     }
 }
