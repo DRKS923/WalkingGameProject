@@ -3,27 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MenuBGMManager : MonoBehaviour, IDataPersistence
-{   
+{    
     [SerializeField] private AudioSource music;
     [SerializeField] private AudioSource soundEffects;
 
-    [SerializeField] private AudioClip buttonClick;
-    [SerializeField] private AudioClip backgroundMusic;
-
     public bool allowMusic = true;
-    [SerializeField] private bool isMusicPlaying = true;
+    [SerializeField] private bool isMusicPlaying = false;
     public bool allowSfx = true;
+
+    public static MenuBGMManager Instance { get; private set; }
 
     // Start is called before the first frame update
     void Start()
     {
-        LoadData();
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        SaveData();
         if (allowMusic)
         {
             if (!isMusicPlaying)
@@ -62,4 +67,28 @@ public class MenuBGMManager : MonoBehaviour, IDataPersistence
         }
     }
 
+    public void MusicToggle()
+    {
+        if (allowMusic)
+        {
+            allowMusic = false;
+        }
+        else if (!allowMusic)
+        {
+            allowMusic = true;
+        }
+    }
+
+    public void SoundToggle()
+    {
+        if (allowSfx)
+        {
+            allowSfx = false;
+        }
+        else if (!allowSfx)
+        {
+            allowSfx = true;
+            PlaySound();
+        }
+    }
 }
