@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class OptionsMenu : MonoBehaviour
 {
-    
+    [SerializeField] GameObject EraseDataMenu;
+    [SerializeField] GameObject OptionsMenuPanel;
 
     public void MusicToggleButton()
     {
@@ -18,6 +19,8 @@ public class OptionsMenu : MonoBehaviour
 
     public void OpenEraseDataMenu()
     {
-
+        // Open the erase data menu
+        OptionsMenuPanel.SetActive(false);
+        EraseDataMenu.SetActive(true);
     }
 }
