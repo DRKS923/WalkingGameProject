@@ -79,6 +79,22 @@ public class FileDataHandler
         }
     }
 
+    public void Delete()
+    {
+        string fullPath = Path.Combine(dataDirPath, dataFileName);
+        if (File.Exists(fullPath))
+        {
+            try
+            {
+                File.Delete(fullPath);
+            }
+            catch (Exception e)
+            {
+                Debug.LogError("Error deleting file: " + fullPath + "\n" + e);
+            }
+        }
+    }
+
     private string EncryptDecrypt(string data)
     {
         string modifiedData = "";

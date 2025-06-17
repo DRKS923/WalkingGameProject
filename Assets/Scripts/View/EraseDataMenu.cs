@@ -9,11 +9,11 @@ public class EraseDataMenu : MonoBehaviour, IDataPersistence
     [SerializeField] GameObject OptionsMenuPanel;
     [SerializeField] GameObject ConfirmationPanel;
 
-    public TMP_text stepCount;  
-    public TMP_text playerLevel;
+    public TMP_Text stepCount;  
+    public TMP_Text playerLevel;
 
-    private float stepCountValue;
-    private int playerLevelValue;
+    public float stepCountValue;
+    public int playerLevelValue;
 
 
     void Start()
@@ -24,13 +24,16 @@ public class EraseDataMenu : MonoBehaviour, IDataPersistence
 
     void Update()
     {
-        
+        if(EraseDataMenuPanel.activeSelf)
+        {
+            ShowData();
+        }
     }
 
     public void LoadData(GameData data)
     {
-        stepcountValue = data.stepCount;
-        playerLevelValue = data.playerLevel;
+        stepCountValue = data.steps;
+        playerLevelValue = data.level;
     }
     public void SaveData(GameData data)
     {
