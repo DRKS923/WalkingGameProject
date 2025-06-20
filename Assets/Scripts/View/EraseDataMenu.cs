@@ -23,11 +23,8 @@ public class EraseDataMenu : MonoBehaviour, IDataPersistence
 
 
     void Update()
-    {
-        if(EraseDataMenuPanel.activeSelf)
-        {
-            ShowData();
-        }
+    {       
+            ShowData();   
     }
 
     public void LoadData(GameData data)
@@ -57,7 +54,7 @@ public class EraseDataMenu : MonoBehaviour, IDataPersistence
     public void ConfirmEraseDataButton()
     {
         // Confirm data erasure
-        // Implement the logic to erase game data here
+        DataPersistanceManager.Instance.DeleteData();
         Debug.Log("Game data erased.");
         // After erasing, return to the options menu or main menu
         ConfirmationPanel.SetActive(false);
@@ -73,12 +70,9 @@ public class EraseDataMenu : MonoBehaviour, IDataPersistence
 
     void ShowData()
     {
-        if(OptionsMenuPanel.activeSelf)
-        {
             // Display the current step count and player level in the UI
             stepCount.text = "Step Count: " + stepCountValue.ToString();
             playerLevel.text = "Player Level: " + playerLevelValue.ToString();
-        }
         
     }
 
