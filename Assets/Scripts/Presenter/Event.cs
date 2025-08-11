@@ -51,7 +51,7 @@ public class Event : MonoBehaviour
             if (canTalk)
             {
                 dialogueTrigger.TriggerDialogue();
-                PlayerManager.Instance.currentExp += ExpCalc(PlayerManager.Instance.playerLevel);
+                PlayerManager.Instance.AddExp(ExpCalc(PlayerManager.Instance.PlayerLevel));
                 canTalk = false;
             }
 

@@ -8,6 +8,7 @@ public class GameData
     public int level;
     public int currentExp;
     public int steps;
+    public int StepCoins;
     public bool allowMusic;
     public bool allowSfx;
 
@@ -28,6 +29,7 @@ public class GameData
         this.level = 1;
         this.currentExp = 0;
         this.steps = 0;
+        this.StepCoins = 0;
         this.allowMusic = true;
         this.allowSfx = true;
 

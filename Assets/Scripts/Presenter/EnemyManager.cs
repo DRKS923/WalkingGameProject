@@ -95,7 +95,7 @@ public class EnemyManager : MonoBehaviour, IDataPersistence
 
     public static void Fight()
     {
-        int playerLevel = PlayerManager.Instance.playerLevel;
+        int playerLevel = PlayerManager.Instance.PlayerLevel;
         int enemyLevel = Instance.enemy.GetComponent<Enemy>().currentLevel;
 
         if (playerLevel < enemyLevel) 

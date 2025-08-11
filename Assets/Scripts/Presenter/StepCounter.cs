@@ -1,23 +1,22 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Android;
-using UnityEngine.UI;
-using UnityEngine.UIElements;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.Controls;
 using UnityEngine.InputSystem.Android;
 
 public class StepCounter : MonoBehaviour, IDataPersistence
 {
-    public static StepCounter Instance;
-    public TMP_Text counterText;
-    public BackgroundScroll scroller;
+    public static StepCounter Instance { get; private set; }
+    [SerializeField] private TMP_Text counterText;
+    [SerializeField] private BackgroundScroll scroller;
+    [SerializeField] private DialogueManager dialogueManager;
+    [SerializeField] private Animator playerCharacter;
+    [SerializeField] private float waitTime = 0.1f;
     public bool isMenuOpen = false;
-    public int prevSteps;
-    [SerializeField]private int steps;
-    
+    private int prevSteps;
+    private int steps;
+    private int prevStepCounter;
 
     public int Steps{
         get { return steps; }   // get method
@@ -27,25 +26,26 @@ public class StepCounter : MonoBehaviour, IDataPersistence
             HasStepsChanged();
         }  // set method
     }
-    public float waitTime = 0.1f;
-    public DialogueManager dialogueManager;
-    public Animator playerCharacter;
-    public int prevStepCounter;
 
     #if UNITY_ANDROID
-    void Start()    
+    void Awake()
     {
         if (Instance != null && Instance != this)
         {
-            Destroy(this);
+            Destroy(gameObject);
+            return;
         }
-        else
-        {
-            Instance = this;
-        }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+
+    void Start()
+    {
+        RequestPermissions();
         prevSteps = Steps;
         prevStepCounter = AndroidStepCounter.current.stepCounter.ReadValue();
     }
+
     private void OnEnable()
     {
         if(!AndroidStepCounter.current.enabled)
@@ -73,22 +73,20 @@ public class StepCounter : MonoBehaviour, IDataPersistence
 
     private void Update()
     {
-        RequestPermissions();
         GetStepCount();
-        counterText.text = "Steps: " + Steps.ToString();
+        counterText.text = $"Steps: {Steps}";
     }
 
     private void HasStepsChanged()
     {
-        if(Steps != prevSteps)
+        if (Steps != prevSteps)
         {
             prevSteps = Steps;
-            scroller.moveBG();
-            EventManager.Instance.currentEvent.GetComponent<Event>().MoveEvent(); 
-            playerCharacter.Play("PlayerWalk");
-            EnemyManager.Instance.enemy.GetComponent<Enemy>().MoveEnemy();
+            scroller?.moveBG();
+            EventManager.Instance?.currentEvent?.GetComponent<Event>()?.MoveEvent();
+            playerCharacter?.Play("PlayerWalk");
+            EnemyManager.Instance?.enemy?.GetComponent<Enemy>()?.MoveEnemy();
         }
-        
     }
 
     public void TakeStep() 

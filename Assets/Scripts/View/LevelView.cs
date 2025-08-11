@@ -15,9 +15,9 @@ public class LevelView : MonoBehaviour
     
     void Update()
     {
-        currentLevel = PlayerManager.Instance.GetComponent<PlayerManager>().playerLevel;
-        currentExp = PlayerManager.Instance.GetComponent<PlayerManager>().currentExp;
-        targetExp = PlayerManager.Instance.GetComponent<PlayerManager>().targetExp;
+        currentLevel = PlayerManager.Instance.GetComponent<PlayerManager>().PlayerLevel;
+        currentExp = PlayerManager.Instance.GetComponent<PlayerManager>().CurrentExp;
+        targetExp = PlayerManager.Instance.GetComponent<PlayerManager>().TargetExp;
         currentLevelText.text = "Level: " + currentLevel.ToString();
         currentExpText.text = "EXP: " + currentExp.ToString();
         targetExpText.text = "Next Level: " + targetExp.ToString();  

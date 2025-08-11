@@ -1,38 +1,35 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Data;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour, IDataPersistence
 {
     public static PlayerManager Instance;
-    public int playerLevel;
-    public int currentExp;
-    public int targetExp;
-    [SerializeField]private AudioSource lvUp;
+    public int PlayerLevel { get; private set; }
+    public int CurrentExp { get; private set; }
+    public int TargetExp { get; private set; }
+    public int StepCoins { get; private set; }
+
+    [SerializeField] private AudioSource lvUp;
 
     public bool allowMusic = true;
     public bool allowSfx = true;
 
-    void Start()
+    void Awake()
     {
         if (Instance != null && Instance != this)
         {
             Destroy(this);
         }
-        else
-        {
-            Instance = this;
-        }
+        Instance = this;
+        
         lvUp = GetComponent<AudioSource>();
     }
 
 
     void Update()
     {
-        targetExp = TargetExpCalc(playerLevel);
-        if (currentExp >= targetExp)
+        TargetExp = TargetExpCalc(PlayerLevel);
+        if (CurrentExp >= TargetExp)
         {
             Levelup();
         }
@@ -41,8 +38,9 @@ public class PlayerManager : MonoBehaviour, IDataPersistence
 
     public void LoadData(GameData data)
     {
-       playerLevel = data.level;
-       currentExp = data.currentExp;
+       PlayerLevel = data.level;
+       CurrentExp = data.currentExp;
+       StepCoins = data.StepCoins; 
 
        allowMusic = data.allowMusic;
        allowSfx = data.allowSfx;
@@ -50,8 +48,9 @@ public class PlayerManager : MonoBehaviour, IDataPersistence
 
     public void SaveData(GameData data)
     {
-        data.level = playerLevel;
-        data.currentExp = currentExp;
+        data.level = PlayerLevel;
+        data.currentExp = CurrentExp;
+        data.StepCoins = StepCoins;
 
         data.allowMusic = allowMusic;
         data.allowSfx = allowSfx;
@@ -59,15 +58,24 @@ public class PlayerManager : MonoBehaviour, IDataPersistence
 
     void Levelup()
     {
-        playerLevel++;
-        currentExp -= targetExp;
-        targetExp = TargetExpCalc(playerLevel);
-        if (allowSfx)
+        PlayerLevel++;
+        CurrentExp -= TargetExp;
+        TargetExp = TargetExpCalc(PlayerLevel);
+        if (allowSfx && lvUp != null)
         {
             lvUp.Play();
         }
     }
 
+    public void GetCoins() 
+    {
+        StepCoins++;
+    } 
+
+    public void AddExp(int exp)
+    {
+        CurrentExp += exp;
+    }
 
     public int TargetExpCalc(int currentLevel)
     {
